@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import { stations, subjectName } from "../data";
@@ -8,25 +8,18 @@ import { uid, now } from "../lib/model";
 import { Button, Field, PageTitle, Empty } from "../components/shared";
 export default function Osce() {
   const { stationId } = useParams();
+  return <OsceContent key={stationId ?? "list"} stationId={stationId} />;
+}
+function OsceContent({ stationId }: { stationId: string | undefined }) {
   const navigate = useNavigate();
   const { data, update } = useStore();
   const station = stations.find((s) => s.id === stationId);
   const key = `medtrack:v1:osce-draft:${stationId}`;
-  const [checked, setChecked] = useState<string[]>([]);
-  const [notes, setNotes] = useState("");
-  const [minutes, setMinutes] = useState(8);
-  const [start, setStart] = useState<number | null>(null);
-  const [tick, setTick] = useState(Date.now());
-  const [restored, setRestored] = useState(false);
-  useEffect(() => {
-    setChecked([]);
-    setNotes("");
-    setStart(null);
-    setMinutes(station?.durationMinutes ?? 8);
+  const [draft] = useState(() => {
     try {
       const raw = sessionStorage.getItem(key);
-      if (raw) {
-        const d = z
+      if (raw)
+        return z
           .object({
             checked: z.array(z.string()),
             notes: z.string().max(20000),
@@ -34,29 +27,33 @@ export default function Osce() {
             start: z.number().nullable(),
           })
           .parse(JSON.parse(raw) as unknown);
-        {
-          setChecked(d.checked);
-          setNotes(d.notes);
-          setMinutes(d.minutes);
-          setStart(d.start);
-        }
-      }
     } catch {
-      /* Main progress remains in validated persistent storage. */
+      /* Ignore invalid draft; never change recorded results. */
     }
-    setRestored(true);
-  }, [key, station]);
+    return {
+      checked: [] as string[],
+      notes: "",
+      minutes: station?.durationMinutes ?? 8,
+      start: null as number | null,
+    };
+  });
+  const [checked, setChecked] = useState(draft.checked);
+  const [notes, setNotes] = useState(draft.notes);
+  const [minutes, setMinutes] = useState(draft.minutes);
+  const [start, setStart] = useState(draft.start);
+  const [tick, setTick] = useState(Date.now());
+  const submitted = useRef(false);
   useEffect(() => {
-    if (!restored) return;
+    if (!station || submitted.current) return;
     try {
       sessionStorage.setItem(
         key,
         JSON.stringify({ checked, notes, minutes, start }),
       );
     } catch {
-      /* Optional in-progress recovery unavailable. */
+      /* Optional draft is unavailable; completed results still use main storage. */
     }
-  }, [checked, notes, minutes, start, key, restored]);
+  }, [station, key, checked, notes, minutes, start]);
   useEffect(() => {
     if (!start) return;
     const t = setInterval(() => setTick(Date.now()), 500);
@@ -143,6 +140,7 @@ export default function Osce() {
           {station.checklistItems.map((i) => (
             <label key={i.id} className="checklist-item">
               <input
+                disabled={!start || remaining === 0}
                 type="checkbox"
                 checked={checked.includes(i.id)}
                 onChange={(e) =>
@@ -190,6 +188,10 @@ export default function Osce() {
           {!start ? (
             <Button
               onClick={() => {
+                if (!Number.isFinite(minutes) || minutes < 1 || minutes > 60) {
+                  toast.error("Durasi harus 1–60 menit");
+                  return;
+                }
                 setStart(Date.now());
                 setTick(Date.now());
               }}
@@ -200,7 +202,7 @@ export default function Osce() {
             <p role="status">
               {remaining
                 ? "Simulasi berjalan"
-                : "Waktu station selesai. Evaluasi checklist dan simpan."}
+                : "Waktu station selesai. Checklist dikunci; tambahkan catatan dan simpan."}
             </p>
           )}
           <h2 className="mt">
@@ -221,7 +223,9 @@ export default function Osce() {
           <Button
             disabled={!start}
             onClick={() => {
-              update((s) => ({
+              if (submitted.current) return;
+              submitted.current = true;
+              const saved = update((s) => ({
                 ...s,
                 osce: [
                   ...s.osce,
@@ -240,7 +244,11 @@ export default function Osce() {
               } catch {
                 /* optional draft */
               }
-              toast.success("Simulasi tersimpan");
+              if (saved) toast.success("Simulasi tersimpan");
+              else
+                toast.error(
+                  "Simulasi ada di memori. Ekspor backup atau coba simpan ulang.",
+                );
               navigate("/latihan/osce");
             }}
           >

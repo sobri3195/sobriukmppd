@@ -6,46 +6,20 @@ import {
   startOfDay,
 } from "date-fns";
 import { questions, subjects, getTopics, getCards } from "../data";
-import {
-  type State,
-  type Quiz,
-  type Review,
-  type Task,
-  uid,
-  now,
-} from "./model";
+import { type State, type Review, type Task, uid, now } from "./model";
 export const localDate = (date = new Date()) => format(date, "yyyy-MM-dd");
-export function score(quiz: Quiz) {
-  let correct = 0,
-    answered = 0;
-  for (const id of quiz.questionIds) {
-    const q = questions.find((q) => q.id === id);
-    const answer = quiz.answers[id];
-    if (q && answer) {
-      answered++;
-      if (answer === q.correctOptionId) correct++;
-    }
-  }
-  return {
-    correct,
-    answered,
-    wrong: answered - correct,
-    unanswered: quiz.questionIds.length - answered,
-    percent: quiz.questionIds.length
-      ? (correct / quiz.questionIds.length) * 100
-      : 0,
-  };
-}
-export const expired = (quiz: Quiz, at = Date.now()) =>
-  quiz.status === "in_progress" && at >= quiz.deadline;
-export function finishQuiz(quiz: Quiz, at = Date.now()): Quiz {
-  return quiz.status === "in_progress"
-    ? {
-        ...quiz,
-        status: expired(quiz, at) ? "expired" : "submitted",
-        submittedAt: new Date(at).toISOString(),
-      }
-    : quiz;
+export { score, expired, finishQuiz } from "./quiz";
+import { score, isFinalized } from "./quiz";
+export function latestReview(reviews: Review[], cardId: string) {
+  return reviews
+    .filter((r) => r.cardId === cardId)
+    .reduce<Review | undefined>(
+      (latest, r) =>
+        !latest || r.at > latest.at || (r.at === latest.at && r.id > latest.id)
+          ? r
+          : latest,
+      undefined,
+    );
 }
 export function schedule(
   previous: Review | undefined,
@@ -99,9 +73,7 @@ export function streak(dates: string[], at = new Date()) {
   return { current, longest };
 }
 export function statistics(s: State) {
-  const quizzes = s.quizzes.filter(
-    (q) => q.status === "submitted" || q.status === "expired",
-  );
+  const quizzes = s.quizzes.filter(isFinalized);
   const totals = quizzes.reduce(
     (a, q) => {
       const r = score(q);
@@ -147,7 +119,7 @@ export function subjectStats(s: State) {
   return subjects.map((subject) => {
     let answered = 0,
       correct = 0;
-    for (const q of s.quizzes.filter((q) => q.submittedAt)) {
+    for (const q of s.quizzes.filter(isFinalized)) {
       for (const id of q.questionIds) {
         const question = questions.find((x) => x.id === id);
         if (question?.subjectId === subject.id && q.answers[id]) {
@@ -184,14 +156,16 @@ export function recommendations(s: State) {
       const due = getCards(s).filter(
         (c) =>
           c.subjectId === subject.id &&
-          (s.reviews.filter((r) => r.cardId === c.id).at(-1)?.dueDate ??
-            "9999-12-31") <= localDate(),
+          (latestReview(s.reviews, c.id)?.dueDate ?? "9999-12-31") <=
+            localDate(),
       ).length;
       const error = subject.answered >= 3 ? 1 - subject.accuracy / 100 : 0;
       const unfinished = 1 - subject.progress / 100;
       const last = s.sessions
         .filter((x) => x.subjectId === subject.id)
-        .at(-1)?.at;
+        .map((x) => x.at)
+        .sort()
+        .at(-1);
       const recency = last
         ? Math.min(
             1,
@@ -209,12 +183,30 @@ export function recommendations(s: State) {
           0.2 * unfinished +
           0.1 * recency +
           0.1 * Math.max(0, 1 - Math.max(0, exam) / 90),
+        suggestedMinutes: Math.min(
+          s.profile?.dailyMinutes ?? 25,
+          Math.round(25 + 35 * error),
+        ),
+        suggestedQuestions: Math.min(
+          s.profile?.dailyQuestions ?? 10,
+          subject.answered >= 3 ? 10 : 5,
+        ),
+        dueCards: due,
+        topic:
+          getTopics(s).find(
+            (t) =>
+              t.subjectId === subject.id &&
+              ["Belum dipelajari", "Perlu review"].includes(t.status),
+          )?.title ?? null,
+        enoughData: subject.answered >= 3,
         reason:
           error > 0.3
             ? "Akurasi latihan masih rendah"
             : due
               ? "Flashcard jatuh tempo"
-              : "Materi belum selesai dipelajari",
+              : unfinished > 0
+                ? "Materi belum selesai dipelajari"
+                : "Pertahankan pemahaman dengan review berkala",
       };
     })
     .sort((a, b) => b.priority - a.priority || a.id.localeCompare(b.id));

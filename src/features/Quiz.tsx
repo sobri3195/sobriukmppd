@@ -1,10 +1,18 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
+import {
+  Link,
+  Navigate,
+  useNavigate,
+  useParams,
+  useLocation,
+  useSearchParams,
+} from "react-router-dom";
 import { Bookmark, Flag, ChevronLeft, ChevronRight } from "lucide-react";
 import { toast } from "sonner";
 import { questions, subjectName } from "../data";
 import { useStore } from "../lib/store";
 import { uid, now } from "../lib/model";
+import { quizReport, isFinalized } from "../lib/quiz";
 import { score, finishQuiz, subjectStats } from "../lib/learning";
 import {
   Button,
@@ -19,8 +27,12 @@ export default function QuizPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const { sessionId } = useParams();
+  const [params] = useSearchParams();
+  const [difficulty, setDifficulty] = useState("");
   const [subject, setSubject] = useState("");
-  const [mode, setMode] = useState("new");
+  const [mode, setMode] = useState(
+    params.get("mode") === "wrong" ? "wrong" : "new",
+  );
   const [count, setCount] = useState(10);
   const [duration, setDuration] = useState(15);
   const [exam, setExam] = useState(location.pathname.includes("tryout"));
@@ -31,7 +43,7 @@ export default function QuizPage() {
   const results = location.pathname.includes("/hasil/");
   const wrongIds = new Set(
     data.quizzes
-      .filter((q) => q.submittedAt)
+      .filter(isFinalized)
       .flatMap((q) =>
         q.questionIds.filter(
           (id) =>
@@ -42,9 +54,7 @@ export default function QuizPage() {
       ),
   );
   const answeredIds = new Set(
-    data.quizzes
-      .filter((q) => q.submittedAt)
-      .flatMap((q) => Object.keys(q.answers)),
+    data.quizzes.filter(isFinalized).flatMap((q) => Object.keys(q.answers)),
   );
   const weak = new Set(
     subjectStats(data)
@@ -54,6 +64,7 @@ export default function QuizPage() {
   const pool = questions.filter(
     (q) =>
       (!subject || q.subjectId === subject) &&
+      (!difficulty || q.difficulty === difficulty) &&
       (mode === "wrong"
         ? wrongIds.has(q.id)
         : mode === "bookmark"
@@ -64,6 +75,16 @@ export default function QuizPage() {
               ? !answeredIds.has(q.id)
               : true),
   );
+  useEffect(() => {
+    if (!sessionId) {
+      setMode(
+        new URLSearchParams(location.search).get("mode") === "wrong"
+          ? "wrong"
+          : "new",
+      );
+      setExam(location.pathname.includes("tryout"));
+    }
+  }, [location.pathname, location.search, sessionId]);
   useEffect(() => {
     setIndex(0);
     setReveal(false);
@@ -86,7 +107,14 @@ export default function QuizPage() {
     }
   }, [tick, quiz, update, navigate]);
   function start() {
-    if (pool.length < count) {
+    if (
+      !Number.isInteger(count) ||
+      count < 1 ||
+      !Number.isFinite(duration) ||
+      duration < 1 ||
+      duration > 480 ||
+      pool.length < count
+    ) {
       toast.error("Jumlah soal tersedia tidak mencukupi.");
       return;
     }
@@ -123,7 +151,15 @@ export default function QuizPage() {
         Sesi tidak ditemukan. <Link to="/latihan">Kembali ke latihan</Link>
       </Empty>
     );
-  if (quiz && (results || quiz.status !== "in_progress")) {
+  if (quiz?.status === "in_progress" && results)
+    return <Navigate to={`/latihan/tryout/${quiz.id}`} replace />;
+  if (quiz?.status === "cancelled")
+    return (
+      <Empty>
+        Sesi dibatalkan. <Link to="/latihan">Kembali ke latihan</Link>
+      </Empty>
+    );
+  if (quiz && isFinalized(quiz)) {
     const result = score(quiz);
     return (
       <>
@@ -151,7 +187,26 @@ export default function QuizPage() {
           </p>
           <p>Hasil simulasi ini bukan pernyataan kelulusan UKNPDPD.</p>
         </section>
-        <div className="stack">
+        <section className="card mt">
+          <h2>Akurasi per bidang & rekomendasi review</h2>
+          {quizReport(quiz).map((row) => (
+            <div className="subject-stat" key={row.subjectId}>
+              <strong>{subjectName(row.subjectId)}</strong>
+              <span>
+                {row.correct}/{row.answered} jawaban benar ·{" "}
+                {row.answered ? `${row.accuracy.toFixed(0)}%` : "Belum dijawab"}{" "}
+                · {row.total - row.answered} kosong
+              </span>
+              <Link to={`/belajar/materi/${row.subjectId}`}>
+                {row.correct < row.total
+                  ? "Review materi bidang ini"
+                  : "Pertahankan pemahaman"}{" "}
+                →
+              </Link>
+            </div>
+          ))}
+        </section>
+        <div className="stack mt">
           {quiz.questionIds.map((id, i) => {
             const q = questions.find((x) => x.id === id)!;
             return (
@@ -413,6 +468,15 @@ export default function QuizPage() {
         {questions.length} soal orisinal · Materi latihan — belum divalidasi
         klinis. Bukan soal resmi UKNPDPD. Tidak ada rujukan medis yang diklaim.
       </div>
+      <nav className="practice-links" aria-label="Menu latihan">
+        <Link to="/latihan/quiz">Quick Quiz</Link>
+        <Link to="/latihan">Bank Soal</Link>
+        <Link to="/latihan/tryout">Tryout CBT</Link>
+        <Link to="/latihan/osce">OSCE</Link>
+        <Link to="/latihan?mode=wrong" onClick={() => setMode("wrong")}>
+          Review Kesalahan
+        </Link>
+      </nav>
       <div className="two-col">
         <section className="card">
           <h2>Atur latihanmu</h2>
@@ -426,6 +490,19 @@ export default function QuizPage() {
             <Field label="Bidang">
               <SubjectSelect value={subject} onChange={setSubject} all />
             </Field>
+            <Field label="Tingkat kesulitan">
+              <select
+                value={difficulty}
+                onChange={(e) => setDifficulty(e.target.value)}
+              >
+                <option value="">Semua tingkat</option>
+                {[...new Set(questions.map((q) => q.difficulty))].map(
+                  (level) => (
+                    <option key={level}>{level}</option>
+                  ),
+                )}
+              </select>
+            </Field>
             <Field label="Sumber soal">
               <select value={mode} onChange={(e) => setMode(e.target.value)}>
                 <option value="new">Semua soal</option>
@@ -438,6 +515,22 @@ export default function QuizPage() {
             <p>
               {pool.length} soal tersedia · tanpa pengulangan dalam satu sesi
             </p>
+            {count > pool.length && (
+              <div className="notice" role="status">
+                Jumlah yang diminta melebihi {pool.length} soal tersedia.{" "}
+                {pool.length > 0 ? (
+                  <Button
+                    variant="outline"
+                    type="button"
+                    onClick={() => setCount(pool.length)}
+                  >
+                    Gunakan {pool.length} soal tersedia
+                  </Button>
+                ) : (
+                  "Ubah filter atau selesaikan latihan untuk mengisi review."
+                )}
+              </div>
+            )}
             <Field label="Jumlah soal">
               <input
                 required
@@ -492,6 +585,7 @@ export default function QuizPage() {
                 disabled={p.n > questions.length}
                 onClick={() => {
                   setSubject("");
+                  setDifficulty("");
                   setMode("new");
                   setCount(p.n);
                   setDuration(p.time);

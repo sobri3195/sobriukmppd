@@ -25,7 +25,7 @@ export const taskSchema = z.object({
   date,
   startTime: z
     .string()
-    .regex(/^\d{2}:\d{2}$/)
+    .regex(/^([01]\d|2[0-3]):[0-5]\d$/)
     .default("09:00"),
   endTime: z.string().default(""),
   durationMinutes: z.number().int().min(1).max(720),
@@ -73,11 +73,11 @@ const quizSchema = z.object({
   status: z.enum(["in_progress", "submitted", "expired", "cancelled"]),
   exam: z.boolean(),
 });
-const cardSchema = z.object({
+export const cardSchema = z.object({
   id,
   subjectId: id,
-  front: z.string().min(1).max(5000),
-  back: z.string().min(1).max(10000),
+  front: z.string().trim().min(1).max(5000),
+  back: z.string().trim().min(1).max(10000),
   favorite: z.boolean().default(false),
 });
 export const reviewSchema = z.object({
@@ -92,17 +92,20 @@ export const reviewSchema = z.object({
 });
 const noteSchema = z.object({
   id,
-  title: z.string().min(1).max(200),
+  title: z
+    .string()
+    .max(200)
+    .transform((value) => value.trim() || "Catatan tanpa judul"),
   body: text,
   subjectId: id,
-  tags: z.string(),
+  tags: z.string().max(2000),
   pinned: z.boolean(),
   updatedAt: stamp,
 });
-const topicSchema = z.object({
+export const topicSchema = z.object({
   id,
   subjectId: id,
-  title: z.string().min(1).max(200),
+  title: z.string().trim().min(1).max(200),
   status: z.enum([
     "Belum dipelajari",
     "Sedang dipelajari",

@@ -1,4 +1,5 @@
-import type { ReactNode } from "react";
+import { useRef, useCallback, type ReactNode } from "react";
+import { useFocusTrap } from "../hooks/useFocusTrap";
 import { subjects } from "../data";
 export { Button } from "./ui/button";
 export function Field({
@@ -52,6 +53,7 @@ export function Progress({ value }: { value: number }) {
     <div
       className="progress"
       role="progressbar"
+      aria-label="Progress belajar"
       aria-valuenow={Math.round(Math.min(100, value))}
       aria-valuemin={0}
       aria-valuemax={100}
@@ -88,6 +90,11 @@ export function Modal({
   children: ReactNode;
   close: () => void;
 }) {
+  const ref = useRef<HTMLElement>(null);
+  const closeRef = useRef(close);
+  closeRef.current = close;
+  const onClose = useCallback(() => closeRef.current(), []);
+  useFocusTrap(ref, true, onClose);
   return (
     <div
       className="modal-shade"
@@ -100,27 +107,11 @@ export function Modal({
         aria-modal="true"
         aria-label={title}
         className="modal"
-        onKeyDown={(e) => {
-          if (e.key === "Escape") close();
-          if (e.key === "Tab") {
-            const nodes = e.currentTarget.querySelectorAll<HTMLElement>(
-              "button,input,select,textarea,a[href]",
-            );
-            const first = nodes[0],
-              last = nodes[nodes.length - 1];
-            if (e.shiftKey && document.activeElement === first) {
-              e.preventDefault();
-              last?.focus();
-            } else if (!e.shiftKey && document.activeElement === last) {
-              e.preventDefault();
-              first?.focus();
-            }
-          }
-        }}
+        ref={ref}
       >
         <div className="section-heading">
           <h2>{title}</h2>
-          <button autoFocus aria-label="Tutup dialog" onClick={close}>
+          <button aria-label="Tutup dialog" onClick={close}>
             ×
           </button>
         </div>

@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { toast } from "sonner";
 import { useStore } from "../lib/store";
 import { emptyState, type State } from "../lib/model";
-import { download, parseBackup, mergeStates, KEY } from "../lib/storage";
+import {
+  download,
+  parseBackup,
+  parseBackupDocument,
+  exportBackup,
+  mergeStates,
+  KEY,
+} from "../lib/storage";
 import { Button, PageTitle } from "../components/shared";
 export default function Backup() {
-  const { data, recover } = useStore();
+  const { data, recover, flush, blocked } = useStore();
+  const request = useRef(0);
+  const [exportedAt, setExportedAt] = useState<string | null>(null);
   const [incoming, setIncoming] = useState<State | null>(null);
   const [mode, setMode] = useState("merge");
   function apply() {
@@ -19,10 +28,19 @@ export default function Backup() {
     )
       return;
     try {
+      if (blocked) {
+        const raw = localStorage.getItem(KEY);
+        if (raw) localStorage.setItem("medtrack:v1:recovery-original", raw);
+      }
       localStorage.setItem("medtrack:v1:rollback", JSON.stringify(data));
-      recover(mode === "replace" ? incoming : mergeStates(data, incoming));
+      if (
+        !recover(mode === "replace" ? incoming : mergeStates(data, incoming))
+      ) {
+        toast.error("Impor gagal; data lama dipertahankan.");
+        return;
+      }
       setIncoming(null);
-      toast.success("Impor diproses. Periksa status penyimpanan di atas.");
+      toast.success("Impor diproses. Data berhasil tersimpan.");
     } catch {
       toast.error(
         "Backup rollback gagal. Impor dibatalkan; ekspor data dan kosongkan ruang browser.",
@@ -36,6 +54,42 @@ export default function Backup() {
         Data tersimpan di browser ini. Pembersihan data browser dapat menghapus
         progres. Simpan backup rutin; tidak ada sinkronisasi akun atau password.
       </div>
+      <div className="actions">
+        <Button
+          variant="outline"
+          onClick={() => {
+            if (flush()) toast.success("Progres tersimpan");
+            else
+              toast.error(
+                "Belum dapat menyimpan. Ekspor backup terlebih dahulu.",
+              );
+          }}
+        >
+          Coba simpan ulang
+        </Button>
+        <Button
+          variant="outline"
+          onClick={() => {
+            if (
+              confirm(
+                "Ekspor progres tab ini sebelum melanjutkan. Muat versi browser dan buang perubahan tab yang belum tersimpan?",
+              )
+            ) {
+              try {
+                const raw = localStorage.getItem(KEY);
+                if (recover(raw ? parseBackup(raw) : emptyState()))
+                  toast.success("Versi tersimpan dimuat");
+              } catch {
+                toast.error(
+                  "Data browser tidak valid. Impor backup untuk pemulihan.",
+                );
+              }
+            }
+          }}
+        >
+          Muat versi tersimpan
+        </Button>
+      </div>
       <div className="two-col">
         <section className="card stack">
           <h2>Ekspor data</h2>
@@ -44,9 +98,7 @@ export default function Backup() {
             kembali.
           </p>
           <Button
-            onClick={() =>
-              download("medtrack-backup.json", JSON.stringify(data, null, 2))
-            }
+            onClick={() => download("medtrack-backup.json", exportBackup(data))}
           >
             Ekspor backup JSON
           </Button>
@@ -64,7 +116,12 @@ export default function Backup() {
               ];
               const csv = rows
                 .map((r) =>
-                  r.map((v) => `"${v.replaceAll('"', '""')}"`).join(","),
+                  r
+                    .map(
+                      (v) =>
+                        `"${(/^[=+@\-\t\r]/.test(v) ? "'" : "") + v.replaceAll('"', '""')}"`,
+                    )
+                    .join(","),
                 )
                 .join("\n");
               download("medtrack-sesi.csv", csv, "text/csv");
@@ -90,20 +147,44 @@ export default function Backup() {
         </section>
         <section className="card stack">
           <h2>Impor backup</h2>
+          <Button
+            variant="ghost"
+            onClick={() => {
+              try {
+                const raw = localStorage.getItem(
+                  "medtrack:v1:recovery-original",
+                );
+                if (!raw) {
+                  toast.error("Tidak ada data asli pemulihan.");
+                  return;
+                }
+                download("medtrack-data-sebelum-pemulihan.json", raw);
+              } catch {
+                toast.error("Data pemulihan tidak dapat dibaca.");
+              }
+            }}
+          >
+            Ekspor data sebelum pemulihan
+          </Button>
           <input
             aria-label="Pilih file backup JSON"
             type="file"
             accept=".json,application/json"
             onChange={async (e) => {
               setIncoming(null);
+              const current = ++request.current;
               try {
                 const file = e.target.files?.[0];
                 if (!file) return;
                 if (file.size > 15_000_000)
                   throw new Error("File terlalu besar");
-                setIncoming(parseBackup(await file.text()));
+                const document = parseBackupDocument(await file.text());
+                if (current !== request.current) return;
+                setIncoming(document.data);
+                setExportedAt(document.exportedAt);
                 toast.success("Struktur backup valid");
               } catch {
+                if (current !== request.current) return;
                 toast.error(
                   "Backup tidak valid, terlalu besar, atau versi tidak didukung. Data tidak diubah.",
                 );
@@ -114,9 +195,12 @@ export default function Backup() {
             <>
               <p>
                 Pratinjau: {incoming.profile?.name ?? "Tanpa profil"} ·{" "}
-                {incoming.tasks.length} tugas · {incoming.sessions.length} sesi
-                · {incoming.quizzes.length} latihan · {incoming.notes.length}{" "}
-                catatan
+                {exportedAt
+                  ? `Diekspor ${new Date(exportedAt).toLocaleString("id-ID")}`
+                  : "Format v1 lama"}{" "}
+                · {incoming.tasks.length} tugas · {incoming.sessions.length}{" "}
+                sesi · {incoming.quizzes.length} latihan ·{" "}
+                {incoming.notes.length} catatan
               </p>
               <select
                 aria-label="Mode impor"
@@ -139,7 +223,8 @@ export default function Backup() {
                 if (!raw) throw new Error("Tidak ada rollback");
                 const previous = parseBackup(raw);
                 if (confirm("Pulihkan backup sebelum impor terakhir?"))
-                  recover(previous);
+                  if (recover(previous)) toast.success("Rollback dipulihkan");
+                  else toast.error("Rollback gagal disimpan");
               } catch {
                 toast.error("Backup rollback tidak tersedia atau tidak valid.");
               }
@@ -163,8 +248,15 @@ export default function Backup() {
                 ) &&
                 prompt("Ketik RESET untuk melanjutkan") === "RESET"
               ) {
-                recover(emptyState());
-                location.assign("/onboarding");
+                if (recover(emptyState())) {
+                  for (const key of Object.keys(localStorage))
+                    if (key.startsWith("medtrack:v1:") && key !== KEY)
+                      localStorage.removeItem(key);
+                  for (const key of Object.keys(sessionStorage))
+                    if (key.startsWith("medtrack:"))
+                      sessionStorage.removeItem(key);
+                  location.assign("/onboarding");
+                } else toast.error("Reset gagal; data lama dipertahankan.");
               }
             }}
           >

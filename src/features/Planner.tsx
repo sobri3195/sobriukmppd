@@ -1,3 +1,4 @@
+import { notifySaved } from "../lib/feedback";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import {
@@ -239,7 +240,7 @@ export default function Planner() {
                 ],
               }));
               setEditing(null);
-              toast.success("Aktivitas tersimpan");
+              notifySaved("Aktivitas tersimpan");
             }}
           >
             <Field label="Judul">
@@ -412,7 +413,7 @@ export default function Planner() {
                 ],
               }));
               setGenerator(false);
-              toast.success(`${plan.length} sesi dibuat`);
+              notifySaved(`${plan.length} sesi dibuat`);
             }}
           >
             <Field label="Tanggal ujian">

@@ -1,10 +1,11 @@
-import { useState } from "react";
-import { Link, useParams, useSearchParams } from "react-router-dom";
 import { toast } from "sonner";
+import { notifySaved } from "../lib/feedback";
+import { useState, useEffect } from "react";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import { useStore } from "../lib/store";
 import { getTopics, subjectName } from "../data";
 import { subjectStats } from "../lib/learning";
-import { uid, type Topic } from "../lib/model";
+import { topicSchema, uid, type Topic } from "../lib/model";
 import {
   Button,
   PageTitle,
@@ -19,6 +20,7 @@ export default function Subjects() {
   const { data, update } = useStore();
   const [params] = useSearchParams();
   const [search, setSearch] = useState(params.get("search") ?? "");
+  useEffect(() => setSearch(params.get("search") ?? ""), [params]);
   const [sort, setSort] = useState("name");
   const [edit, setEdit] = useState<Topic | null>(null);
   const topics = getTopics(data).filter(
@@ -156,12 +158,17 @@ export default function Subjects() {
             className="stack"
             onSubmit={(e) => {
               e.preventDefault();
+              const validated = topicSchema.safeParse(edit);
+              if (!validated.success) {
+                toast.error(validated.error.issues[0].message);
+                return;
+              }
               update((s) => ({
                 ...s,
                 topics: [...s.topics.filter((x) => x.id !== edit.id), edit],
               }));
               setEdit(null);
-              toast.success("Topik tersimpan");
+              notifySaved("Topik tersimpan");
             }}
           >
             <Field label="Judul">

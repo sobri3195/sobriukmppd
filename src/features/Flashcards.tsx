@@ -1,9 +1,11 @@
+import { notifySaved } from "../lib/feedback";
 import { useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { toast } from "sonner";
 import { getCards, subjectName } from "../data";
 import { useStore } from "../lib/store";
-import { uid, type Card } from "../lib/model";
-import { localDate, schedule } from "../lib/learning";
+import { cardSchema, uid, type Card } from "../lib/model";
+import { localDate, schedule, latestReview } from "../lib/learning";
 import {
   Button,
   PageTitle,
@@ -20,9 +22,14 @@ export default function Flashcards() {
   const [favorites, setFavorites] = useState(false);
   const [index, setIndex] = useState(0);
   const [flipped, setFlipped] = useState(false);
-  const [edit, setEdit] = useState<Card | null>(null);
+  const [params] = useSearchParams();
+  const [edit, setEdit] = useState<Card | null>(() =>
+    params.has("new")
+      ? { id: uid(), subjectId: "s1", front: "", back: "", favorite: false }
+      : null,
+  );
   const cards = getCards(data).filter((c) => {
-    const r = data.reviews.filter((r) => r.cardId === c.id).at(-1);
+    const r = latestReview(data.reviews, c.id);
     return (
       (!subject || c.subjectId === subject) &&
       (!favorites || c.favorite) &&
@@ -31,12 +38,10 @@ export default function Flashcards() {
     );
   });
   const card = cards[index % Math.max(1, cards.length)];
-  const latest = card
-    ? data.reviews.filter((r) => r.cardId === card.id).at(-1)
-    : undefined;
+  const latest = card ? latestReview(data.reviews, card.id) : undefined;
   function rate(quality: number) {
     if (!card) return;
-    update((s) => ({
+    const saved = update((s) => ({
       ...s,
       reviews: [
         ...s.reviews,
@@ -44,7 +49,11 @@ export default function Flashcards() {
       ],
     }));
     setFlipped(false);
-    toast.success("Review tersimpan");
+    if (saved) notifySaved("Review tersimpan");
+    else
+      toast.error(
+        "Review belum tersimpan di browser. Ekspor backup atau coba simpan ulang.",
+      );
     if (!dueOnly) setIndex(index + 1);
   }
   return (
@@ -110,7 +119,7 @@ export default function Flashcards() {
         {cards.length} kartu dalam pilihan ·{" "}
         {
           getCards(data).filter((c) => {
-            const r = data.reviews.filter((x) => x.cardId === c.id).at(-1);
+            const r = latestReview(data.reviews, c.id);
             return r && r.dueDate < localDate();
           }).length
         }{" "}
@@ -208,12 +217,17 @@ export default function Flashcards() {
             className="stack"
             onSubmit={(e) => {
               e.preventDefault();
+              const validated = cardSchema.safeParse(edit);
+              if (!validated.success) {
+                toast.error(validated.error.issues[0].message);
+                return;
+              }
               update((s) => ({
                 ...s,
                 cards: [...s.cards.filter((c) => c.id !== edit.id), edit],
               }));
               setEdit(null);
-              toast.success("Kartu tersimpan");
+              notifySaved("Kartu tersimpan");
             }}
           >
             <Field label="Bidang">
