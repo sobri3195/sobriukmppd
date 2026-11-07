@@ -1,0 +1,1622 @@
+[
+  {
+    "id": "q1",
+    "subjectId": "s1",
+    "topicId": "t1",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Struktur jantung manakah yang menerima darah dari vena pulmonalis?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Atrium kiri"
+      },
+      {
+        "id": "B",
+        "text": "Atrium kanan"
+      },
+      {
+        "id": "C",
+        "text": "Ventrikel kanan"
+      },
+      {
+        "id": "D",
+        "text": "Vena kava superior"
+      },
+      {
+        "id": "E",
+        "text": "Arteri pulmonalis"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Vena pulmonalis membawa darah dari paru menuju atrium kiri.",
+    "optionExplanations": {
+      "A": "Vena pulmonalis membawa darah dari paru menuju atrium kiri.",
+      "B": "Atrium kanan bukan jawaban untuk fokus pertanyaan ini. Vena pulmonalis membawa darah dari paru menuju atrium kiri.",
+      "C": "Ventrikel kanan bukan jawaban untuk fokus pertanyaan ini. Vena pulmonalis membawa darah dari paru menuju atrium kiri.",
+      "D": "Vena kava superior bukan jawaban untuk fokus pertanyaan ini. Vena pulmonalis membawa darah dari paru menuju atrium kiri.",
+      "E": "Arteri pulmonalis bukan jawaban untuk fokus pertanyaan ini. Vena pulmonalis membawa darah dari paru menuju atrium kiri."
+    },
+    "learningPoints": [
+      "Vena pulmonalis membawa darah dari paru menuju atrium kiri."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q2",
+    "subjectId": "s1",
+    "topicId": "t2",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Pemeriksaan apa yang merekam aktivitas listrik jantung melalui elektroda permukaan?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ekokardiografi"
+      },
+      {
+        "id": "B",
+        "text": "Spirometri"
+      },
+      {
+        "id": "C",
+        "text": "Elektroensefalografi"
+      },
+      {
+        "id": "D",
+        "text": "Audiometri"
+      },
+      {
+        "id": "E",
+        "text": "Elektrokardiografi"
+      }
+    ],
+    "correctOptionId": "E",
+    "explanation": "EKG merekam aktivitas listrik; ekokardiografi menggunakan ultrasonografi untuk menilai struktur dan fungsi.",
+    "optionExplanations": {
+      "A": "Ekokardiografi bukan jawaban untuk fokus pertanyaan ini. EKG merekam aktivitas listrik; ekokardiografi menggunakan ultrasonografi untuk menilai struktur dan fungsi.",
+      "B": "Spirometri bukan jawaban untuk fokus pertanyaan ini. EKG merekam aktivitas listrik; ekokardiografi menggunakan ultrasonografi untuk menilai struktur dan fungsi.",
+      "C": "Elektroensefalografi bukan jawaban untuk fokus pertanyaan ini. EKG merekam aktivitas listrik; ekokardiografi menggunakan ultrasonografi untuk menilai struktur dan fungsi.",
+      "D": "Audiometri bukan jawaban untuk fokus pertanyaan ini. EKG merekam aktivitas listrik; ekokardiografi menggunakan ultrasonografi untuk menilai struktur dan fungsi.",
+      "E": "EKG merekam aktivitas listrik; ekokardiografi menggunakan ultrasonografi untuk menilai struktur dan fungsi."
+    },
+    "learningPoints": [
+      "EKG merekam aktivitas listrik; ekokardiografi menggunakan ultrasonografi untuk menilai struktur dan fungsi."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q3",
+    "subjectId": "s2",
+    "topicId": "t3",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Pada spirometri, apa yang dimaksud dengan FEV1?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Kapasitas total paru"
+      },
+      {
+        "id": "B",
+        "text": "Volume inspirasi normal"
+      },
+      {
+        "id": "C",
+        "text": "Frekuensi napas per menit"
+      },
+      {
+        "id": "D",
+        "text": "Volume ekspirasi paksa pada detik pertama"
+      },
+      {
+        "id": "E",
+        "text": "Volume residu paru"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "FEV1 adalah volume udara yang dikeluarkan secara paksa selama detik pertama manuver ekspirasi.",
+    "optionExplanations": {
+      "A": "Kapasitas total paru bukan jawaban untuk fokus pertanyaan ini. FEV1 adalah volume udara yang dikeluarkan secara paksa selama detik pertama manuver ekspirasi.",
+      "B": "Volume inspirasi normal bukan jawaban untuk fokus pertanyaan ini. FEV1 adalah volume udara yang dikeluarkan secara paksa selama detik pertama manuver ekspirasi.",
+      "C": "Frekuensi napas per menit bukan jawaban untuk fokus pertanyaan ini. FEV1 adalah volume udara yang dikeluarkan secara paksa selama detik pertama manuver ekspirasi.",
+      "D": "FEV1 adalah volume udara yang dikeluarkan secara paksa selama detik pertama manuver ekspirasi.",
+      "E": "Volume residu paru bukan jawaban untuk fokus pertanyaan ini. FEV1 adalah volume udara yang dikeluarkan secara paksa selama detik pertama manuver ekspirasi."
+    },
+    "learningPoints": [
+      "FEV1 adalah volume udara yang dikeluarkan secara paksa selama detik pertama manuver ekspirasi."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q4",
+    "subjectId": "s2",
+    "topicId": "t4",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Sel alveolar mana yang terutama menghasilkan surfaktan?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Makrofag alveolar"
+      },
+      {
+        "id": "B",
+        "text": "Sel goblet trakea"
+      },
+      {
+        "id": "C",
+        "text": "Pneumosit tipe II"
+      },
+      {
+        "id": "D",
+        "text": "Pneumosit tipe I"
+      },
+      {
+        "id": "E",
+        "text": "Eritrosit"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Pneumosit tipe II menghasilkan surfaktan yang menurunkan tegangan permukaan alveolus.",
+    "optionExplanations": {
+      "A": "Makrofag alveolar bukan jawaban untuk fokus pertanyaan ini. Pneumosit tipe II menghasilkan surfaktan yang menurunkan tegangan permukaan alveolus.",
+      "B": "Sel goblet trakea bukan jawaban untuk fokus pertanyaan ini. Pneumosit tipe II menghasilkan surfaktan yang menurunkan tegangan permukaan alveolus.",
+      "C": "Pneumosit tipe II menghasilkan surfaktan yang menurunkan tegangan permukaan alveolus.",
+      "D": "Pneumosit tipe I bukan jawaban untuk fokus pertanyaan ini. Pneumosit tipe II menghasilkan surfaktan yang menurunkan tegangan permukaan alveolus.",
+      "E": "Eritrosit bukan jawaban untuk fokus pertanyaan ini. Pneumosit tipe II menghasilkan surfaktan yang menurunkan tegangan permukaan alveolus."
+    },
+    "learningPoints": [
+      "Pneumosit tipe II menghasilkan surfaktan yang menurunkan tegangan permukaan alveolus."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q5",
+    "subjectId": "s3",
+    "topicId": "t5",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Organ apa yang terutama menghasilkan empedu?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Lambung"
+      },
+      {
+        "id": "B",
+        "text": "Hati"
+      },
+      {
+        "id": "C",
+        "text": "Kandung empedu"
+      },
+      {
+        "id": "D",
+        "text": "Pankreas"
+      },
+      {
+        "id": "E",
+        "text": "Limpa"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Hati memproduksi empedu; kandung empedu menyimpan dan memekatkannya.",
+    "optionExplanations": {
+      "A": "Lambung bukan jawaban untuk fokus pertanyaan ini. Hati memproduksi empedu; kandung empedu menyimpan dan memekatkannya.",
+      "B": "Hati memproduksi empedu; kandung empedu menyimpan dan memekatkannya.",
+      "C": "Kandung empedu bukan jawaban untuk fokus pertanyaan ini. Hati memproduksi empedu; kandung empedu menyimpan dan memekatkannya.",
+      "D": "Pankreas bukan jawaban untuk fokus pertanyaan ini. Hati memproduksi empedu; kandung empedu menyimpan dan memekatkannya.",
+      "E": "Limpa bukan jawaban untuk fokus pertanyaan ini. Hati memproduksi empedu; kandung empedu menyimpan dan memekatkannya."
+    },
+    "learningPoints": [
+      "Hati memproduksi empedu; kandung empedu menyimpan dan memekatkannya."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q6",
+    "subjectId": "s3",
+    "topicId": "t6",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Bagian saluran cerna mana yang terutama menyerap vitamin B12 terikat faktor intrinsik?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ileum terminal"
+      },
+      {
+        "id": "B",
+        "text": "Esofagus"
+      },
+      {
+        "id": "C",
+        "text": "Lambung"
+      },
+      {
+        "id": "D",
+        "text": "Duodenum proksimal"
+      },
+      {
+        "id": "E",
+        "text": "Kolon sigmoid"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Kompleks vitamin B12 dan faktor intrinsik diserap di ileum terminal.",
+    "optionExplanations": {
+      "A": "Kompleks vitamin B12 dan faktor intrinsik diserap di ileum terminal.",
+      "B": "Esofagus bukan jawaban untuk fokus pertanyaan ini. Kompleks vitamin B12 dan faktor intrinsik diserap di ileum terminal.",
+      "C": "Lambung bukan jawaban untuk fokus pertanyaan ini. Kompleks vitamin B12 dan faktor intrinsik diserap di ileum terminal.",
+      "D": "Duodenum proksimal bukan jawaban untuk fokus pertanyaan ini. Kompleks vitamin B12 dan faktor intrinsik diserap di ileum terminal.",
+      "E": "Kolon sigmoid bukan jawaban untuk fokus pertanyaan ini. Kompleks vitamin B12 dan faktor intrinsik diserap di ileum terminal."
+    },
+    "learningPoints": [
+      "Kompleks vitamin B12 dan faktor intrinsik diserap di ileum terminal."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q7",
+    "subjectId": "s4",
+    "topicId": "t7",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Unit fungsional dasar ginjal disebut apa?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Alveolus"
+      },
+      {
+        "id": "B",
+        "text": "Lobulus hepatik"
+      },
+      {
+        "id": "C",
+        "text": "Osteon"
+      },
+      {
+        "id": "D",
+        "text": "Asinus pankreas"
+      },
+      {
+        "id": "E",
+        "text": "Nefron"
+      }
+    ],
+    "correctOptionId": "E",
+    "explanation": "Nefron mencakup korpuskulus renal dan sistem tubulus untuk filtrasi serta pengolahan filtrat.",
+    "optionExplanations": {
+      "A": "Alveolus bukan jawaban untuk fokus pertanyaan ini. Nefron mencakup korpuskulus renal dan sistem tubulus untuk filtrasi serta pengolahan filtrat.",
+      "B": "Lobulus hepatik bukan jawaban untuk fokus pertanyaan ini. Nefron mencakup korpuskulus renal dan sistem tubulus untuk filtrasi serta pengolahan filtrat.",
+      "C": "Osteon bukan jawaban untuk fokus pertanyaan ini. Nefron mencakup korpuskulus renal dan sistem tubulus untuk filtrasi serta pengolahan filtrat.",
+      "D": "Asinus pankreas bukan jawaban untuk fokus pertanyaan ini. Nefron mencakup korpuskulus renal dan sistem tubulus untuk filtrasi serta pengolahan filtrat.",
+      "E": "Nefron mencakup korpuskulus renal dan sistem tubulus untuk filtrasi serta pengolahan filtrat."
+    },
+    "learningPoints": [
+      "Nefron mencakup korpuskulus renal dan sistem tubulus untuk filtrasi serta pengolahan filtrat."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q8",
+    "subjectId": "s4",
+    "topicId": "t8",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Hormon apa yang meningkatkan reabsorpsi air melalui aquaporin di duktus kolektivus?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Kalsitonin"
+      },
+      {
+        "id": "B",
+        "text": "Gastrin"
+      },
+      {
+        "id": "C",
+        "text": "Prolaktin"
+      },
+      {
+        "id": "D",
+        "text": "Vasopresin (ADH)"
+      },
+      {
+        "id": "E",
+        "text": "Glukagon"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "ADH meningkatkan permeabilitas air duktus kolektivus melalui aquaporin.",
+    "optionExplanations": {
+      "A": "Kalsitonin bukan jawaban untuk fokus pertanyaan ini. ADH meningkatkan permeabilitas air duktus kolektivus melalui aquaporin.",
+      "B": "Gastrin bukan jawaban untuk fokus pertanyaan ini. ADH meningkatkan permeabilitas air duktus kolektivus melalui aquaporin.",
+      "C": "Prolaktin bukan jawaban untuk fokus pertanyaan ini. ADH meningkatkan permeabilitas air duktus kolektivus melalui aquaporin.",
+      "D": "ADH meningkatkan permeabilitas air duktus kolektivus melalui aquaporin.",
+      "E": "Glukagon bukan jawaban untuk fokus pertanyaan ini. ADH meningkatkan permeabilitas air duktus kolektivus melalui aquaporin."
+    },
+    "learningPoints": [
+      "ADH meningkatkan permeabilitas air duktus kolektivus melalui aquaporin."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q9",
+    "subjectId": "s5",
+    "topicId": "t9",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Apa fungsi utama plasenta dalam pertukaran maternal-fetal?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Pembentukan empedu janin"
+      },
+      {
+        "id": "B",
+        "text": "Pemecahan tulang ibu"
+      },
+      {
+        "id": "C",
+        "text": "Pertukaran gas dan nutrien"
+      },
+      {
+        "id": "D",
+        "text": "Produksi sel saraf ibu"
+      },
+      {
+        "id": "E",
+        "text": "Penyimpanan urin ibu"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Plasenta memfasilitasi pertukaran gas, nutrien, dan produk metabolik antara sirkulasi ibu dan janin.",
+    "optionExplanations": {
+      "A": "Pembentukan empedu janin bukan jawaban untuk fokus pertanyaan ini. Plasenta memfasilitasi pertukaran gas, nutrien, dan produk metabolik antara sirkulasi ibu dan janin.",
+      "B": "Pemecahan tulang ibu bukan jawaban untuk fokus pertanyaan ini. Plasenta memfasilitasi pertukaran gas, nutrien, dan produk metabolik antara sirkulasi ibu dan janin.",
+      "C": "Plasenta memfasilitasi pertukaran gas, nutrien, dan produk metabolik antara sirkulasi ibu dan janin.",
+      "D": "Produksi sel saraf ibu bukan jawaban untuk fokus pertanyaan ini. Plasenta memfasilitasi pertukaran gas, nutrien, dan produk metabolik antara sirkulasi ibu dan janin.",
+      "E": "Penyimpanan urin ibu bukan jawaban untuk fokus pertanyaan ini. Plasenta memfasilitasi pertukaran gas, nutrien, dan produk metabolik antara sirkulasi ibu dan janin."
+    },
+    "learningPoints": [
+      "Plasenta memfasilitasi pertukaran gas, nutrien, dan produk metabolik antara sirkulasi ibu dan janin."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q10",
+    "subjectId": "s5",
+    "topicId": "t10",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Hormon apa yang terutama dideteksi oleh tes kehamilan urin?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Kortisol"
+      },
+      {
+        "id": "B",
+        "text": "hCG"
+      },
+      {
+        "id": "C",
+        "text": "TSH"
+      },
+      {
+        "id": "D",
+        "text": "FSH"
+      },
+      {
+        "id": "E",
+        "text": "Insulin"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Tes kehamilan mendeteksi human chorionic gonadotropin; interpretasinya mempertimbangkan waktu pemeriksaan.",
+    "optionExplanations": {
+      "A": "Kortisol bukan jawaban untuk fokus pertanyaan ini. Tes kehamilan mendeteksi human chorionic gonadotropin; interpretasinya mempertimbangkan waktu pemeriksaan.",
+      "B": "Tes kehamilan mendeteksi human chorionic gonadotropin; interpretasinya mempertimbangkan waktu pemeriksaan.",
+      "C": "TSH bukan jawaban untuk fokus pertanyaan ini. Tes kehamilan mendeteksi human chorionic gonadotropin; interpretasinya mempertimbangkan waktu pemeriksaan.",
+      "D": "FSH bukan jawaban untuk fokus pertanyaan ini. Tes kehamilan mendeteksi human chorionic gonadotropin; interpretasinya mempertimbangkan waktu pemeriksaan.",
+      "E": "Insulin bukan jawaban untuk fokus pertanyaan ini. Tes kehamilan mendeteksi human chorionic gonadotropin; interpretasinya mempertimbangkan waktu pemeriksaan."
+    },
+    "learningPoints": [
+      "Tes kehamilan mendeteksi human chorionic gonadotropin; interpretasinya mempertimbangkan waktu pemeriksaan."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q11",
+    "subjectId": "s6",
+    "topicId": "t11",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Sel pankreas manakah yang memproduksi insulin?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sel beta"
+      },
+      {
+        "id": "B",
+        "text": "Sel alfa"
+      },
+      {
+        "id": "C",
+        "text": "Sel delta"
+      },
+      {
+        "id": "D",
+        "text": "Sel asinar"
+      },
+      {
+        "id": "E",
+        "text": "Sel duktus"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Sel beta pulau Langerhans memproduksi insulin; sel alfa menghasilkan glukagon.",
+    "optionExplanations": {
+      "A": "Sel beta pulau Langerhans memproduksi insulin; sel alfa menghasilkan glukagon.",
+      "B": "Sel alfa bukan jawaban untuk fokus pertanyaan ini. Sel beta pulau Langerhans memproduksi insulin; sel alfa menghasilkan glukagon.",
+      "C": "Sel delta bukan jawaban untuk fokus pertanyaan ini. Sel beta pulau Langerhans memproduksi insulin; sel alfa menghasilkan glukagon.",
+      "D": "Sel asinar bukan jawaban untuk fokus pertanyaan ini. Sel beta pulau Langerhans memproduksi insulin; sel alfa menghasilkan glukagon.",
+      "E": "Sel duktus bukan jawaban untuk fokus pertanyaan ini. Sel beta pulau Langerhans memproduksi insulin; sel alfa menghasilkan glukagon."
+    },
+    "learningPoints": [
+      "Sel beta pulau Langerhans memproduksi insulin; sel alfa menghasilkan glukagon."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q12",
+    "subjectId": "s6",
+    "topicId": "t12",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Pemeriksaan HbA1c menggambarkan apa?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Glukosa hanya saat pengambilan darah"
+      },
+      {
+        "id": "B",
+        "text": "Kadar insulin satu menit terakhir"
+      },
+      {
+        "id": "C",
+        "text": "Fungsi tiroid"
+      },
+      {
+        "id": "D",
+        "text": "Kadar natrium serum"
+      },
+      {
+        "id": "E",
+        "text": "Paparan glukosa rata-rata beberapa bulan terakhir"
+      }
+    ],
+    "correctOptionId": "E",
+    "explanation": "HbA1c mencerminkan glikasi hemoglobin selama umur eritrosit, dan dapat dipengaruhi gangguan eritrosit.",
+    "optionExplanations": {
+      "A": "Glukosa hanya saat pengambilan darah bukan jawaban untuk fokus pertanyaan ini. HbA1c mencerminkan glikasi hemoglobin selama umur eritrosit, dan dapat dipengaruhi gangguan eritrosit.",
+      "B": "Kadar insulin satu menit terakhir bukan jawaban untuk fokus pertanyaan ini. HbA1c mencerminkan glikasi hemoglobin selama umur eritrosit, dan dapat dipengaruhi gangguan eritrosit.",
+      "C": "Fungsi tiroid bukan jawaban untuk fokus pertanyaan ini. HbA1c mencerminkan glikasi hemoglobin selama umur eritrosit, dan dapat dipengaruhi gangguan eritrosit.",
+      "D": "Kadar natrium serum bukan jawaban untuk fokus pertanyaan ini. HbA1c mencerminkan glikasi hemoglobin selama umur eritrosit, dan dapat dipengaruhi gangguan eritrosit.",
+      "E": "HbA1c mencerminkan glikasi hemoglobin selama umur eritrosit, dan dapat dipengaruhi gangguan eritrosit."
+    },
+    "learningPoints": [
+      "HbA1c mencerminkan glikasi hemoglobin selama umur eritrosit, dan dapat dipengaruhi gangguan eritrosit."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q13",
+    "subjectId": "s7",
+    "topicId": "t13",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Komponen darah apa yang terutama berperan dalam hemostasis primer?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Eritrosit"
+      },
+      {
+        "id": "B",
+        "text": "Albumin"
+      },
+      {
+        "id": "C",
+        "text": "Bilirubin"
+      },
+      {
+        "id": "D",
+        "text": "Trombosit"
+      },
+      {
+        "id": "E",
+        "text": "Eosinofil"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "Trombosit beradhesi dan beragregasi membentuk sumbat awal; faktor koagulasi memperkuatnya dengan fibrin.",
+    "optionExplanations": {
+      "A": "Eritrosit bukan jawaban untuk fokus pertanyaan ini. Trombosit beradhesi dan beragregasi membentuk sumbat awal; faktor koagulasi memperkuatnya dengan fibrin.",
+      "B": "Albumin bukan jawaban untuk fokus pertanyaan ini. Trombosit beradhesi dan beragregasi membentuk sumbat awal; faktor koagulasi memperkuatnya dengan fibrin.",
+      "C": "Bilirubin bukan jawaban untuk fokus pertanyaan ini. Trombosit beradhesi dan beragregasi membentuk sumbat awal; faktor koagulasi memperkuatnya dengan fibrin.",
+      "D": "Trombosit beradhesi dan beragregasi membentuk sumbat awal; faktor koagulasi memperkuatnya dengan fibrin.",
+      "E": "Eosinofil bukan jawaban untuk fokus pertanyaan ini. Trombosit beradhesi dan beragregasi membentuk sumbat awal; faktor koagulasi memperkuatnya dengan fibrin."
+    },
+    "learningPoints": [
+      "Trombosit beradhesi dan beragregasi membentuk sumbat awal; faktor koagulasi memperkuatnya dengan fibrin."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q14",
+    "subjectId": "s7",
+    "topicId": "t14",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Sel darah mana yang terutama mengangkut oksigen menggunakan hemoglobin?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Limfosit"
+      },
+      {
+        "id": "B",
+        "text": "Basofil"
+      },
+      {
+        "id": "C",
+        "text": "Eritrosit"
+      },
+      {
+        "id": "D",
+        "text": "Neutrofil"
+      },
+      {
+        "id": "E",
+        "text": "Monosit"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Eritrosit mengandung hemoglobin untuk pengangkutan oksigen.",
+    "optionExplanations": {
+      "A": "Limfosit bukan jawaban untuk fokus pertanyaan ini. Eritrosit mengandung hemoglobin untuk pengangkutan oksigen.",
+      "B": "Basofil bukan jawaban untuk fokus pertanyaan ini. Eritrosit mengandung hemoglobin untuk pengangkutan oksigen.",
+      "C": "Eritrosit mengandung hemoglobin untuk pengangkutan oksigen.",
+      "D": "Neutrofil bukan jawaban untuk fokus pertanyaan ini. Eritrosit mengandung hemoglobin untuk pengangkutan oksigen.",
+      "E": "Monosit bukan jawaban untuk fokus pertanyaan ini. Eritrosit mengandung hemoglobin untuk pengangkutan oksigen."
+    },
+    "learningPoints": [
+      "Eritrosit mengandung hemoglobin untuk pengangkutan oksigen."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q15",
+    "subjectId": "s8",
+    "topicId": "t15",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Saraf kranialis mana yang membawa informasi visual dari retina?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Nervus vagus (X)"
+      },
+      {
+        "id": "B",
+        "text": "Nervus optikus (II)"
+      },
+      {
+        "id": "C",
+        "text": "Nervus olfaktorius (I)"
+      },
+      {
+        "id": "D",
+        "text": "Nervus trigeminus (V)"
+      },
+      {
+        "id": "E",
+        "text": "Nervus fasialis (VII)"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Nervus optikus membawa impuls visual; gerak bola mata melibatkan saraf lain.",
+    "optionExplanations": {
+      "A": "Nervus vagus (X) bukan jawaban untuk fokus pertanyaan ini. Nervus optikus membawa impuls visual; gerak bola mata melibatkan saraf lain.",
+      "B": "Nervus optikus membawa impuls visual; gerak bola mata melibatkan saraf lain.",
+      "C": "Nervus olfaktorius (I) bukan jawaban untuk fokus pertanyaan ini. Nervus optikus membawa impuls visual; gerak bola mata melibatkan saraf lain.",
+      "D": "Nervus trigeminus (V) bukan jawaban untuk fokus pertanyaan ini. Nervus optikus membawa impuls visual; gerak bola mata melibatkan saraf lain.",
+      "E": "Nervus fasialis (VII) bukan jawaban untuk fokus pertanyaan ini. Nervus optikus membawa impuls visual; gerak bola mata melibatkan saraf lain."
+    },
+    "learningPoints": [
+      "Nervus optikus membawa impuls visual; gerak bola mata melibatkan saraf lain."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q16",
+    "subjectId": "s8",
+    "topicId": "t16",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Apa tiga komponen Glasgow Coma Scale?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Respons mata, verbal, dan motorik"
+      },
+      {
+        "id": "B",
+        "text": "Tekanan darah, nadi, dan suhu"
+      },
+      {
+        "id": "C",
+        "text": "Pupil, refleks kornea, dan pendengaran"
+      },
+      {
+        "id": "D",
+        "text": "Memori, bahasa, dan orientasi"
+      },
+      {
+        "id": "E",
+        "text": "Napas, saturasi, dan perfusi"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "GCS menilai respons membuka mata, respons verbal, serta respons motorik; faktor pengganggu harus dicatat.",
+    "optionExplanations": {
+      "A": "GCS menilai respons membuka mata, respons verbal, serta respons motorik; faktor pengganggu harus dicatat.",
+      "B": "Tekanan darah, nadi, dan suhu bukan jawaban untuk fokus pertanyaan ini. GCS menilai respons membuka mata, respons verbal, serta respons motorik; faktor pengganggu harus dicatat.",
+      "C": "Pupil, refleks kornea, dan pendengaran bukan jawaban untuk fokus pertanyaan ini. GCS menilai respons membuka mata, respons verbal, serta respons motorik; faktor pengganggu harus dicatat.",
+      "D": "Memori, bahasa, dan orientasi bukan jawaban untuk fokus pertanyaan ini. GCS menilai respons membuka mata, respons verbal, serta respons motorik; faktor pengganggu harus dicatat.",
+      "E": "Napas, saturasi, dan perfusi bukan jawaban untuk fokus pertanyaan ini. GCS menilai respons membuka mata, respons verbal, serta respons motorik; faktor pengganggu harus dicatat."
+    },
+    "learningPoints": [
+      "GCS menilai respons membuka mata, respons verbal, serta respons motorik; faktor pengganggu harus dicatat."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q17",
+    "subjectId": "s9",
+    "topicId": "t17",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Dalam wawancara klinis, apa yang dimaksud dengan afek?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Riwayat penyakit keluarga"
+      },
+      {
+        "id": "B",
+        "text": "Kapasitas paru"
+      },
+      {
+        "id": "C",
+        "text": "Keluhan nyeri terlokalisasi"
+      },
+      {
+        "id": "D",
+        "text": "Nilai laboratorium"
+      },
+      {
+        "id": "E",
+        "text": "Ekspresi emosi yang diamati pemeriksa"
+      }
+    ],
+    "correctOptionId": "E",
+    "explanation": "Afek merupakan ekspresi emosi teramati, sedangkan mood merujuk pengalaman emosi subjektif yang lebih menetap.",
+    "optionExplanations": {
+      "A": "Riwayat penyakit keluarga bukan jawaban untuk fokus pertanyaan ini. Afek merupakan ekspresi emosi teramati, sedangkan mood merujuk pengalaman emosi subjektif yang lebih menetap.",
+      "B": "Kapasitas paru bukan jawaban untuk fokus pertanyaan ini. Afek merupakan ekspresi emosi teramati, sedangkan mood merujuk pengalaman emosi subjektif yang lebih menetap.",
+      "C": "Keluhan nyeri terlokalisasi bukan jawaban untuk fokus pertanyaan ini. Afek merupakan ekspresi emosi teramati, sedangkan mood merujuk pengalaman emosi subjektif yang lebih menetap.",
+      "D": "Nilai laboratorium bukan jawaban untuk fokus pertanyaan ini. Afek merupakan ekspresi emosi teramati, sedangkan mood merujuk pengalaman emosi subjektif yang lebih menetap.",
+      "E": "Afek merupakan ekspresi emosi teramati, sedangkan mood merujuk pengalaman emosi subjektif yang lebih menetap."
+    },
+    "learningPoints": [
+      "Afek merupakan ekspresi emosi teramati, sedangkan mood merujuk pengalaman emosi subjektif yang lebih menetap."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q18",
+    "subjectId": "s9",
+    "topicId": "t18",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Pasien mengungkapkan keinginan menyakiti diri. Langkah komunikasi awal mana yang paling tepat?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Janjikan kerahasiaan absolut"
+      },
+      {
+        "id": "B",
+        "text": "Beri penilaian moral"
+      },
+      {
+        "id": "C",
+        "text": "Tunda semua penilaian keselamatan"
+      },
+      {
+        "id": "D",
+        "text": "Tanyakan risiko secara langsung dan empatik"
+      },
+      {
+        "id": "E",
+        "text": "Abaikan agar tidak memperkuat ide"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "Penilaian risiko langsung dan empatik membantu menentukan keselamatan serta kebutuhan dukungan segera.",
+    "optionExplanations": {
+      "A": "Janjikan kerahasiaan absolut bukan jawaban untuk fokus pertanyaan ini. Penilaian risiko langsung dan empatik membantu menentukan keselamatan serta kebutuhan dukungan segera.",
+      "B": "Beri penilaian moral bukan jawaban untuk fokus pertanyaan ini. Penilaian risiko langsung dan empatik membantu menentukan keselamatan serta kebutuhan dukungan segera.",
+      "C": "Tunda semua penilaian keselamatan bukan jawaban untuk fokus pertanyaan ini. Penilaian risiko langsung dan empatik membantu menentukan keselamatan serta kebutuhan dukungan segera.",
+      "D": "Penilaian risiko langsung dan empatik membantu menentukan keselamatan serta kebutuhan dukungan segera.",
+      "E": "Abaikan agar tidak memperkuat ide bukan jawaban untuk fokus pertanyaan ini. Penilaian risiko langsung dan empatik membantu menentukan keselamatan serta kebutuhan dukungan segera."
+    },
+    "learningPoints": [
+      "Penilaian risiko langsung dan empatik membantu menentukan keselamatan serta kebutuhan dukungan segera."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q19",
+    "subjectId": "s10",
+    "topicId": "t19",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Sel apa yang terutama berperan dalam resorpsi tulang?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Fibroblas"
+      },
+      {
+        "id": "B",
+        "text": "Miosit"
+      },
+      {
+        "id": "C",
+        "text": "Osteoklas"
+      },
+      {
+        "id": "D",
+        "text": "Osteoblas"
+      },
+      {
+        "id": "E",
+        "text": "Kondrosit"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Osteoklas meresorpsi tulang; osteoblas berperan dalam pembentukan matriks tulang.",
+    "optionExplanations": {
+      "A": "Fibroblas bukan jawaban untuk fokus pertanyaan ini. Osteoklas meresorpsi tulang; osteoblas berperan dalam pembentukan matriks tulang.",
+      "B": "Miosit bukan jawaban untuk fokus pertanyaan ini. Osteoklas meresorpsi tulang; osteoblas berperan dalam pembentukan matriks tulang.",
+      "C": "Osteoklas meresorpsi tulang; osteoblas berperan dalam pembentukan matriks tulang.",
+      "D": "Osteoblas bukan jawaban untuk fokus pertanyaan ini. Osteoklas meresorpsi tulang; osteoblas berperan dalam pembentukan matriks tulang.",
+      "E": "Kondrosit bukan jawaban untuk fokus pertanyaan ini. Osteoklas meresorpsi tulang; osteoblas berperan dalam pembentukan matriks tulang."
+    },
+    "learningPoints": [
+      "Osteoklas meresorpsi tulang; osteoblas berperan dalam pembentukan matriks tulang."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q20",
+    "subjectId": "s10",
+    "topicId": "t20",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Struktur apa yang menghubungkan otot dengan tulang?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Bursa"
+      },
+      {
+        "id": "B",
+        "text": "Tendon"
+      },
+      {
+        "id": "C",
+        "text": "Ligamen"
+      },
+      {
+        "id": "D",
+        "text": "Kartilago artikular"
+      },
+      {
+        "id": "E",
+        "text": "Meniskus"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Tendon menghubungkan otot dan tulang; ligamen umumnya menghubungkan tulang dengan tulang.",
+    "optionExplanations": {
+      "A": "Bursa bukan jawaban untuk fokus pertanyaan ini. Tendon menghubungkan otot dan tulang; ligamen umumnya menghubungkan tulang dengan tulang.",
+      "B": "Tendon menghubungkan otot dan tulang; ligamen umumnya menghubungkan tulang dengan tulang.",
+      "C": "Ligamen bukan jawaban untuk fokus pertanyaan ini. Tendon menghubungkan otot dan tulang; ligamen umumnya menghubungkan tulang dengan tulang.",
+      "D": "Kartilago artikular bukan jawaban untuk fokus pertanyaan ini. Tendon menghubungkan otot dan tulang; ligamen umumnya menghubungkan tulang dengan tulang.",
+      "E": "Meniskus bukan jawaban untuk fokus pertanyaan ini. Tendon menghubungkan otot dan tulang; ligamen umumnya menghubungkan tulang dengan tulang."
+    },
+    "learningPoints": [
+      "Tendon menghubungkan otot dan tulang; ligamen umumnya menghubungkan tulang dengan tulang."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q21",
+    "subjectId": "s11",
+    "topicId": "t21",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Lapisan kulit manakah yang paling superfisial?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Epidermis"
+      },
+      {
+        "id": "B",
+        "text": "Dermis retikular"
+      },
+      {
+        "id": "C",
+        "text": "Hipodermis"
+      },
+      {
+        "id": "D",
+        "text": "Fasia profunda"
+      },
+      {
+        "id": "E",
+        "text": "Periosteum"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Epidermis merupakan lapisan terluar kulit, di atas dermis.",
+    "optionExplanations": {
+      "A": "Epidermis merupakan lapisan terluar kulit, di atas dermis.",
+      "B": "Dermis retikular bukan jawaban untuk fokus pertanyaan ini. Epidermis merupakan lapisan terluar kulit, di atas dermis.",
+      "C": "Hipodermis bukan jawaban untuk fokus pertanyaan ini. Epidermis merupakan lapisan terluar kulit, di atas dermis.",
+      "D": "Fasia profunda bukan jawaban untuk fokus pertanyaan ini. Epidermis merupakan lapisan terluar kulit, di atas dermis.",
+      "E": "Periosteum bukan jawaban untuk fokus pertanyaan ini. Epidermis merupakan lapisan terluar kulit, di atas dermis."
+    },
+    "learningPoints": [
+      "Epidermis merupakan lapisan terluar kulit, di atas dermis."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q22",
+    "subjectId": "s11",
+    "topicId": "t22",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Lesi kulit berisi cairan jernih berdiameter kecil disebut apa?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Makula"
+      },
+      {
+        "id": "B",
+        "text": "Papula padat"
+      },
+      {
+        "id": "C",
+        "text": "Nodul padat"
+      },
+      {
+        "id": "D",
+        "text": "Skuama"
+      },
+      {
+        "id": "E",
+        "text": "Vesikel"
+      }
+    ],
+    "correctOptionId": "E",
+    "explanation": "Vesikel adalah lesi kecil berisi cairan; makula berupa perubahan warna tanpa elevasi.",
+    "optionExplanations": {
+      "A": "Makula bukan jawaban untuk fokus pertanyaan ini. Vesikel adalah lesi kecil berisi cairan; makula berupa perubahan warna tanpa elevasi.",
+      "B": "Papula padat bukan jawaban untuk fokus pertanyaan ini. Vesikel adalah lesi kecil berisi cairan; makula berupa perubahan warna tanpa elevasi.",
+      "C": "Nodul padat bukan jawaban untuk fokus pertanyaan ini. Vesikel adalah lesi kecil berisi cairan; makula berupa perubahan warna tanpa elevasi.",
+      "D": "Skuama bukan jawaban untuk fokus pertanyaan ini. Vesikel adalah lesi kecil berisi cairan; makula berupa perubahan warna tanpa elevasi.",
+      "E": "Vesikel adalah lesi kecil berisi cairan; makula berupa perubahan warna tanpa elevasi."
+    },
+    "learningPoints": [
+      "Vesikel adalah lesi kecil berisi cairan; makula berupa perubahan warna tanpa elevasi."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q23",
+    "subjectId": "s12",
+    "topicId": "t23",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Struktur mata mana yang mengatur banyaknya cahaya melalui perubahan ukuran pupil?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Sklera"
+      },
+      {
+        "id": "B",
+        "text": "Koroid posterior"
+      },
+      {
+        "id": "C",
+        "text": "Saraf optik"
+      },
+      {
+        "id": "D",
+        "text": "Iris"
+      },
+      {
+        "id": "E",
+        "text": "Retina"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "Otot iris mengatur diameter pupil dan jumlah cahaya yang masuk.",
+    "optionExplanations": {
+      "A": "Sklera bukan jawaban untuk fokus pertanyaan ini. Otot iris mengatur diameter pupil dan jumlah cahaya yang masuk.",
+      "B": "Koroid posterior bukan jawaban untuk fokus pertanyaan ini. Otot iris mengatur diameter pupil dan jumlah cahaya yang masuk.",
+      "C": "Saraf optik bukan jawaban untuk fokus pertanyaan ini. Otot iris mengatur diameter pupil dan jumlah cahaya yang masuk.",
+      "D": "Otot iris mengatur diameter pupil dan jumlah cahaya yang masuk.",
+      "E": "Retina bukan jawaban untuk fokus pertanyaan ini. Otot iris mengatur diameter pupil dan jumlah cahaya yang masuk."
+    },
+    "learningPoints": [
+      "Otot iris mengatur diameter pupil dan jumlah cahaya yang masuk."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q24",
+    "subjectId": "s12",
+    "topicId": "t24",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Pemeriksaan menggunakan kartu Snellen terutama menilai apa?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Ketebalan kornea"
+      },
+      {
+        "id": "B",
+        "text": "Lapang pandang perifer lengkap"
+      },
+      {
+        "id": "C",
+        "text": "Tajam penglihatan jauh"
+      },
+      {
+        "id": "D",
+        "text": "Tekanan intraokular"
+      },
+      {
+        "id": "E",
+        "text": "Produksi air mata"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Kartu Snellen digunakan untuk menilai ketajaman penglihatan jauh pada jarak standar.",
+    "optionExplanations": {
+      "A": "Ketebalan kornea bukan jawaban untuk fokus pertanyaan ini. Kartu Snellen digunakan untuk menilai ketajaman penglihatan jauh pada jarak standar.",
+      "B": "Lapang pandang perifer lengkap bukan jawaban untuk fokus pertanyaan ini. Kartu Snellen digunakan untuk menilai ketajaman penglihatan jauh pada jarak standar.",
+      "C": "Kartu Snellen digunakan untuk menilai ketajaman penglihatan jauh pada jarak standar.",
+      "D": "Tekanan intraokular bukan jawaban untuk fokus pertanyaan ini. Kartu Snellen digunakan untuk menilai ketajaman penglihatan jauh pada jarak standar.",
+      "E": "Produksi air mata bukan jawaban untuk fokus pertanyaan ini. Kartu Snellen digunakan untuk menilai ketajaman penglihatan jauh pada jarak standar."
+    },
+    "learningPoints": [
+      "Kartu Snellen digunakan untuk menilai ketajaman penglihatan jauh pada jarak standar."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q25",
+    "subjectId": "s13",
+    "topicId": "t25",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Bagian telinga mana yang mengandung koklea?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Telinga tengah"
+      },
+      {
+        "id": "B",
+        "text": "Telinga dalam"
+      },
+      {
+        "id": "C",
+        "text": "Daun telinga"
+      },
+      {
+        "id": "D",
+        "text": "Liang telinga luar"
+      },
+      {
+        "id": "E",
+        "text": "Membran timpani"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Koklea di telinga dalam mengubah getaran menjadi sinyal saraf pendengaran.",
+    "optionExplanations": {
+      "A": "Telinga tengah bukan jawaban untuk fokus pertanyaan ini. Koklea di telinga dalam mengubah getaran menjadi sinyal saraf pendengaran.",
+      "B": "Koklea di telinga dalam mengubah getaran menjadi sinyal saraf pendengaran.",
+      "C": "Daun telinga bukan jawaban untuk fokus pertanyaan ini. Koklea di telinga dalam mengubah getaran menjadi sinyal saraf pendengaran.",
+      "D": "Liang telinga luar bukan jawaban untuk fokus pertanyaan ini. Koklea di telinga dalam mengubah getaran menjadi sinyal saraf pendengaran.",
+      "E": "Membran timpani bukan jawaban untuk fokus pertanyaan ini. Koklea di telinga dalam mengubah getaran menjadi sinyal saraf pendengaran."
+    },
+    "learningPoints": [
+      "Koklea di telinga dalam mengubah getaran menjadi sinyal saraf pendengaran."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q26",
+    "subjectId": "s13",
+    "topicId": "t26",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Otoskopi terutama digunakan untuk melihat struktur apa?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Liang telinga dan membran timpani"
+      },
+      {
+        "id": "B",
+        "text": "Retina"
+      },
+      {
+        "id": "C",
+        "text": "Pita suara secara langsung"
+      },
+      {
+        "id": "D",
+        "text": "Sinus frontal secara langsung"
+      },
+      {
+        "id": "E",
+        "text": "Koklea secara langsung"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Otoskop membantu menilai liang telinga serta membran timpani, bukan struktur telinga dalam secara langsung.",
+    "optionExplanations": {
+      "A": "Otoskop membantu menilai liang telinga serta membran timpani, bukan struktur telinga dalam secara langsung.",
+      "B": "Retina bukan jawaban untuk fokus pertanyaan ini. Otoskop membantu menilai liang telinga serta membran timpani, bukan struktur telinga dalam secara langsung.",
+      "C": "Pita suara secara langsung bukan jawaban untuk fokus pertanyaan ini. Otoskop membantu menilai liang telinga serta membran timpani, bukan struktur telinga dalam secara langsung.",
+      "D": "Sinus frontal secara langsung bukan jawaban untuk fokus pertanyaan ini. Otoskop membantu menilai liang telinga serta membran timpani, bukan struktur telinga dalam secara langsung.",
+      "E": "Koklea secara langsung bukan jawaban untuk fokus pertanyaan ini. Otoskop membantu menilai liang telinga serta membran timpani, bukan struktur telinga dalam secara langsung."
+    },
+    "learningPoints": [
+      "Otoskop membantu menilai liang telinga serta membran timpani, bukan struktur telinga dalam secara langsung."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q27",
+    "subjectId": "s14",
+    "topicId": "t27",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Apa tujuan utama kebersihan tangan dalam pelayanan kesehatan?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Menggantikan seluruh alat pelindung"
+      },
+      {
+        "id": "B",
+        "text": "Mensterilkan ruangan"
+      },
+      {
+        "id": "C",
+        "text": "Mengobati infeksi sistemik"
+      },
+      {
+        "id": "D",
+        "text": "Menggantikan vaksinasi"
+      },
+      {
+        "id": "E",
+        "text": "Mengurangi transmisi mikroorganisme"
+      }
+    ],
+    "correctOptionId": "E",
+    "explanation": "Kebersihan tangan mengurangi perpindahan mikroorganisme dan tetap perlu disertai tindakan pencegahan lain sesuai konteks.",
+    "optionExplanations": {
+      "A": "Menggantikan seluruh alat pelindung bukan jawaban untuk fokus pertanyaan ini. Kebersihan tangan mengurangi perpindahan mikroorganisme dan tetap perlu disertai tindakan pencegahan lain sesuai konteks.",
+      "B": "Mensterilkan ruangan bukan jawaban untuk fokus pertanyaan ini. Kebersihan tangan mengurangi perpindahan mikroorganisme dan tetap perlu disertai tindakan pencegahan lain sesuai konteks.",
+      "C": "Mengobati infeksi sistemik bukan jawaban untuk fokus pertanyaan ini. Kebersihan tangan mengurangi perpindahan mikroorganisme dan tetap perlu disertai tindakan pencegahan lain sesuai konteks.",
+      "D": "Menggantikan vaksinasi bukan jawaban untuk fokus pertanyaan ini. Kebersihan tangan mengurangi perpindahan mikroorganisme dan tetap perlu disertai tindakan pencegahan lain sesuai konteks.",
+      "E": "Kebersihan tangan mengurangi perpindahan mikroorganisme dan tetap perlu disertai tindakan pencegahan lain sesuai konteks."
+    },
+    "learningPoints": [
+      "Kebersihan tangan mengurangi perpindahan mikroorganisme dan tetap perlu disertai tindakan pencegahan lain sesuai konteks."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q28",
+    "subjectId": "s14",
+    "topicId": "t28",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Antibiotik antibakteri ditujukan terutama terhadap agen apa?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Semua jamur"
+      },
+      {
+        "id": "B",
+        "text": "Semua parasit"
+      },
+      {
+        "id": "C",
+        "text": "Prion"
+      },
+      {
+        "id": "D",
+        "text": "Bakteri"
+      },
+      {
+        "id": "E",
+        "text": "Semua virus"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "Antibakteri menargetkan struktur atau proses bakteri; pemilihan memerlukan indikasi yang sesuai.",
+    "optionExplanations": {
+      "A": "Semua jamur bukan jawaban untuk fokus pertanyaan ini. Antibakteri menargetkan struktur atau proses bakteri; pemilihan memerlukan indikasi yang sesuai.",
+      "B": "Semua parasit bukan jawaban untuk fokus pertanyaan ini. Antibakteri menargetkan struktur atau proses bakteri; pemilihan memerlukan indikasi yang sesuai.",
+      "C": "Prion bukan jawaban untuk fokus pertanyaan ini. Antibakteri menargetkan struktur atau proses bakteri; pemilihan memerlukan indikasi yang sesuai.",
+      "D": "Antibakteri menargetkan struktur atau proses bakteri; pemilihan memerlukan indikasi yang sesuai.",
+      "E": "Semua virus bukan jawaban untuk fokus pertanyaan ini. Antibakteri menargetkan struktur atau proses bakteri; pemilihan memerlukan indikasi yang sesuai."
+    },
+    "learningPoints": [
+      "Antibakteri menargetkan struktur atau proses bakteri; pemilihan memerlukan indikasi yang sesuai."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q29",
+    "subjectId": "s15",
+    "topicId": "t29",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Apa tujuan utama pemantauan kurva pertumbuhan anak secara serial?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Memastikan kecerdasan anak"
+      },
+      {
+        "id": "B",
+        "text": "Menentukan golongan darah"
+      },
+      {
+        "id": "C",
+        "text": "Menilai pola pertumbuhan dari waktu ke waktu"
+      },
+      {
+        "id": "D",
+        "text": "Menentukan diagnosis tunggal dari satu titik"
+      },
+      {
+        "id": "E",
+        "text": "Menggantikan pemeriksaan klinis"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Pengukuran serial memungkinkan penilaian tren pertumbuhan dalam konteks klinis.",
+    "optionExplanations": {
+      "A": "Memastikan kecerdasan anak bukan jawaban untuk fokus pertanyaan ini. Pengukuran serial memungkinkan penilaian tren pertumbuhan dalam konteks klinis.",
+      "B": "Menentukan golongan darah bukan jawaban untuk fokus pertanyaan ini. Pengukuran serial memungkinkan penilaian tren pertumbuhan dalam konteks klinis.",
+      "C": "Pengukuran serial memungkinkan penilaian tren pertumbuhan dalam konteks klinis.",
+      "D": "Menentukan diagnosis tunggal dari satu titik bukan jawaban untuk fokus pertanyaan ini. Pengukuran serial memungkinkan penilaian tren pertumbuhan dalam konteks klinis.",
+      "E": "Menggantikan pemeriksaan klinis bukan jawaban untuk fokus pertanyaan ini. Pengukuran serial memungkinkan penilaian tren pertumbuhan dalam konteks klinis."
+    },
+    "learningPoints": [
+      "Pengukuran serial memungkinkan penilaian tren pertumbuhan dalam konteks klinis."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q30",
+    "subjectId": "s15",
+    "topicId": "t30",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Larutan rehidrasi oral terutama membantu melalui mekanisme apa?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Penekanan produksi insulin"
+      },
+      {
+        "id": "B",
+        "text": "Kotranspor natrium dan glukosa di usus"
+      },
+      {
+        "id": "C",
+        "text": "Penghambatan total motilitas usus"
+      },
+      {
+        "id": "D",
+        "text": "Penghancuran semua mikroba"
+      },
+      {
+        "id": "E",
+        "text": "Penggantian sel darah"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Kotranspor natrium-glukosa membantu penyerapan air dan elektrolit.",
+    "optionExplanations": {
+      "A": "Penekanan produksi insulin bukan jawaban untuk fokus pertanyaan ini. Kotranspor natrium-glukosa membantu penyerapan air dan elektrolit.",
+      "B": "Kotranspor natrium-glukosa membantu penyerapan air dan elektrolit.",
+      "C": "Penghambatan total motilitas usus bukan jawaban untuk fokus pertanyaan ini. Kotranspor natrium-glukosa membantu penyerapan air dan elektrolit.",
+      "D": "Penghancuran semua mikroba bukan jawaban untuk fokus pertanyaan ini. Kotranspor natrium-glukosa membantu penyerapan air dan elektrolit.",
+      "E": "Penggantian sel darah bukan jawaban untuk fokus pertanyaan ini. Kotranspor natrium-glukosa membantu penyerapan air dan elektrolit."
+    },
+    "learningPoints": [
+      "Kotranspor natrium-glukosa membantu penyerapan air dan elektrolit."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q31",
+    "subjectId": "s16",
+    "topicId": "t31",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Mengapa identitas pasien dan lokasi tindakan diverifikasi sebelum operasi?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Mengurangi risiko tindakan pada pasien atau lokasi yang salah"
+      },
+      {
+        "id": "B",
+        "text": "Menggantikan persetujuan tindakan"
+      },
+      {
+        "id": "C",
+        "text": "Menghapus kebutuhan asepsis"
+      },
+      {
+        "id": "D",
+        "text": "Menjamin tidak ada komplikasi"
+      },
+      {
+        "id": "E",
+        "text": "Menggantikan penilaian anestesi"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Verifikasi identitas, prosedur, dan lokasi merupakan bagian pencegahan kesalahan tindakan.",
+    "optionExplanations": {
+      "A": "Verifikasi identitas, prosedur, dan lokasi merupakan bagian pencegahan kesalahan tindakan.",
+      "B": "Menggantikan persetujuan tindakan bukan jawaban untuk fokus pertanyaan ini. Verifikasi identitas, prosedur, dan lokasi merupakan bagian pencegahan kesalahan tindakan.",
+      "C": "Menghapus kebutuhan asepsis bukan jawaban untuk fokus pertanyaan ini. Verifikasi identitas, prosedur, dan lokasi merupakan bagian pencegahan kesalahan tindakan.",
+      "D": "Menjamin tidak ada komplikasi bukan jawaban untuk fokus pertanyaan ini. Verifikasi identitas, prosedur, dan lokasi merupakan bagian pencegahan kesalahan tindakan.",
+      "E": "Menggantikan penilaian anestesi bukan jawaban untuk fokus pertanyaan ini. Verifikasi identitas, prosedur, dan lokasi merupakan bagian pencegahan kesalahan tindakan."
+    },
+    "learningPoints": [
+      "Verifikasi identitas, prosedur, dan lokasi merupakan bagian pencegahan kesalahan tindakan."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q32",
+    "subjectId": "s16",
+    "topicId": "t32",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Apa arti teknik aseptik?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Pemberian antibiotik kepada semua orang"
+      },
+      {
+        "id": "B",
+        "text": "Penghilangan rasa nyeri"
+      },
+      {
+        "id": "C",
+        "text": "Peningkatan tekanan darah"
+      },
+      {
+        "id": "D",
+        "text": "Penggunaan alat apa pun tanpa persiapan"
+      },
+      {
+        "id": "E",
+        "text": "Praktik yang meminimalkan kontaminasi mikroorganisme"
+      }
+    ],
+    "correctOptionId": "E",
+    "explanation": "Teknik aseptik mengurangi kontaminasi area dan alat selama tindakan.",
+    "optionExplanations": {
+      "A": "Pemberian antibiotik kepada semua orang bukan jawaban untuk fokus pertanyaan ini. Teknik aseptik mengurangi kontaminasi area dan alat selama tindakan.",
+      "B": "Penghilangan rasa nyeri bukan jawaban untuk fokus pertanyaan ini. Teknik aseptik mengurangi kontaminasi area dan alat selama tindakan.",
+      "C": "Peningkatan tekanan darah bukan jawaban untuk fokus pertanyaan ini. Teknik aseptik mengurangi kontaminasi area dan alat selama tindakan.",
+      "D": "Penggunaan alat apa pun tanpa persiapan bukan jawaban untuk fokus pertanyaan ini. Teknik aseptik mengurangi kontaminasi area dan alat selama tindakan.",
+      "E": "Teknik aseptik mengurangi kontaminasi area dan alat selama tindakan."
+    },
+    "learningPoints": [
+      "Teknik aseptik mengurangi kontaminasi area dan alat selama tindakan."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q33",
+    "subjectId": "s17",
+    "topicId": "t33",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Sensitivitas suatu tes diagnostik adalah proporsi apa?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Orang sakit di antara semua hasil positif"
+      },
+      {
+        "id": "B",
+        "text": "Orang sehat di antara semua hasil negatif"
+      },
+      {
+        "id": "C",
+        "text": "Seluruh hasil positif di populasi"
+      },
+      {
+        "id": "D",
+        "text": "Hasil positif di antara orang yang benar-benar sakit"
+      },
+      {
+        "id": "E",
+        "text": "Hasil negatif di antara semua yang sehat"
+      }
+    ],
+    "correctOptionId": "D",
+    "explanation": "Sensitivitas dihitung sebagai true positive dibagi true positive ditambah false negative.",
+    "optionExplanations": {
+      "A": "Orang sakit di antara semua hasil positif bukan jawaban untuk fokus pertanyaan ini. Sensitivitas dihitung sebagai true positive dibagi true positive ditambah false negative.",
+      "B": "Orang sehat di antara semua hasil negatif bukan jawaban untuk fokus pertanyaan ini. Sensitivitas dihitung sebagai true positive dibagi true positive ditambah false negative.",
+      "C": "Seluruh hasil positif di populasi bukan jawaban untuk fokus pertanyaan ini. Sensitivitas dihitung sebagai true positive dibagi true positive ditambah false negative.",
+      "D": "Sensitivitas dihitung sebagai true positive dibagi true positive ditambah false negative.",
+      "E": "Hasil negatif di antara semua yang sehat bukan jawaban untuk fokus pertanyaan ini. Sensitivitas dihitung sebagai true positive dibagi true positive ditambah false negative."
+    },
+    "learningPoints": [
+      "Sensitivitas dihitung sebagai true positive dibagi true positive ditambah false negative."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q34",
+    "subjectId": "s17",
+    "topicId": "t34",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Desain studi apa yang mengikuti kelompok terpapar dan tidak terpapar untuk mengamati luaran?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Studi ekologi saja"
+      },
+      {
+        "id": "B",
+        "text": "Tinjauan naratif"
+      },
+      {
+        "id": "C",
+        "text": "Kohort"
+      },
+      {
+        "id": "D",
+        "text": "Laporan kasus tunggal"
+      },
+      {
+        "id": "E",
+        "text": "Seri kasus tanpa pembanding"
+      }
+    ],
+    "correctOptionId": "C",
+    "explanation": "Studi kohort mengamati kejadian luaran pada kelompok berdasarkan paparan.",
+    "optionExplanations": {
+      "A": "Studi ekologi saja bukan jawaban untuk fokus pertanyaan ini. Studi kohort mengamati kejadian luaran pada kelompok berdasarkan paparan.",
+      "B": "Tinjauan naratif bukan jawaban untuk fokus pertanyaan ini. Studi kohort mengamati kejadian luaran pada kelompok berdasarkan paparan.",
+      "C": "Studi kohort mengamati kejadian luaran pada kelompok berdasarkan paparan.",
+      "D": "Laporan kasus tunggal bukan jawaban untuk fokus pertanyaan ini. Studi kohort mengamati kejadian luaran pada kelompok berdasarkan paparan.",
+      "E": "Seri kasus tanpa pembanding bukan jawaban untuk fokus pertanyaan ini. Studi kohort mengamati kejadian luaran pada kelompok berdasarkan paparan."
+    },
+    "learningPoints": [
+      "Studi kohort mengamati kejadian luaran pada kelompok berdasarkan paparan."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q35",
+    "subjectId": "s18",
+    "topicId": "t35",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Apa komponen penting persetujuan tindakan yang bermakna?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Janji hasil pasti"
+      },
+      {
+        "id": "B",
+        "text": "Informasi memadai, kapasitas, dan keputusan sukarela"
+      },
+      {
+        "id": "C",
+        "text": "Tanda tangan saja tanpa penjelasan"
+      },
+      {
+        "id": "D",
+        "text": "Keputusan dokter saja"
+      },
+      {
+        "id": "E",
+        "text": "Persetujuan tanpa pilihan"
+      }
+    ],
+    "correctOptionId": "B",
+    "explanation": "Persetujuan memerlukan informasi yang dipahami, kapasitas pengambilan keputusan, serta kebebasan memilih.",
+    "optionExplanations": {
+      "A": "Janji hasil pasti bukan jawaban untuk fokus pertanyaan ini. Persetujuan memerlukan informasi yang dipahami, kapasitas pengambilan keputusan, serta kebebasan memilih.",
+      "B": "Persetujuan memerlukan informasi yang dipahami, kapasitas pengambilan keputusan, serta kebebasan memilih.",
+      "C": "Tanda tangan saja tanpa penjelasan bukan jawaban untuk fokus pertanyaan ini. Persetujuan memerlukan informasi yang dipahami, kapasitas pengambilan keputusan, serta kebebasan memilih.",
+      "D": "Keputusan dokter saja bukan jawaban untuk fokus pertanyaan ini. Persetujuan memerlukan informasi yang dipahami, kapasitas pengambilan keputusan, serta kebebasan memilih.",
+      "E": "Persetujuan tanpa pilihan bukan jawaban untuk fokus pertanyaan ini. Persetujuan memerlukan informasi yang dipahami, kapasitas pengambilan keputusan, serta kebebasan memilih."
+    },
+    "learningPoints": [
+      "Persetujuan memerlukan informasi yang dipahami, kapasitas pengambilan keputusan, serta kebebasan memilih."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  },
+  {
+    "id": "q36",
+    "subjectId": "s18",
+    "topicId": "t36",
+    "competencyTags": ["Konsep dasar"],
+    "difficulty": "dasar",
+    "stem": "Prinsip kerahasiaan mengharuskan tenaga kesehatan melakukan apa?",
+    "options": [
+      {
+        "id": "A",
+        "text": "Membatasi akses informasi sesuai kewenangan dan dasar yang sah"
+      },
+      {
+        "id": "B",
+        "text": "Membagikan semua data ke media sosial"
+      },
+      {
+        "id": "C",
+        "text": "Membuka rekam medis tanpa alasan"
+      },
+      {
+        "id": "D",
+        "text": "Menjanjikan kerahasiaan tanpa pengecualian hukum"
+      },
+      {
+        "id": "E",
+        "text": "Menghapus dokumentasi klinis"
+      }
+    ],
+    "correctOptionId": "A",
+    "explanation": "Informasi kesehatan harus dilindungi; pengungkapan memerlukan dasar etis dan hukum yang sesuai.",
+    "optionExplanations": {
+      "A": "Informasi kesehatan harus dilindungi; pengungkapan memerlukan dasar etis dan hukum yang sesuai.",
+      "B": "Membagikan semua data ke media sosial bukan jawaban untuk fokus pertanyaan ini. Informasi kesehatan harus dilindungi; pengungkapan memerlukan dasar etis dan hukum yang sesuai.",
+      "C": "Membuka rekam medis tanpa alasan bukan jawaban untuk fokus pertanyaan ini. Informasi kesehatan harus dilindungi; pengungkapan memerlukan dasar etis dan hukum yang sesuai.",
+      "D": "Menjanjikan kerahasiaan tanpa pengecualian hukum bukan jawaban untuk fokus pertanyaan ini. Informasi kesehatan harus dilindungi; pengungkapan memerlukan dasar etis dan hukum yang sesuai.",
+      "E": "Menghapus dokumentasi klinis bukan jawaban untuk fokus pertanyaan ini. Informasi kesehatan harus dilindungi; pengungkapan memerlukan dasar etis dan hukum yang sesuai."
+    },
+    "learningPoints": [
+      "Informasi kesehatan harus dilindungi; pengungkapan memerlukan dasar etis dan hukum yang sesuai."
+    ],
+    "reference": null,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis",
+    "createdAt": "2026-11-07T00:00:00.000Z"
+  }
+]

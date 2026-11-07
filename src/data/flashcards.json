@@ -1,0 +1,422 @@
+[
+  {
+    "id": "c1",
+    "subjectId": "s1",
+    "front": "Struktur jantung manakah yang menerima darah dari vena pulmonalis?",
+    "back": "Vena pulmonalis membawa darah dari paru menuju atrium kiri.",
+    "favorite": false
+  },
+  {
+    "id": "c2",
+    "subjectId": "s1",
+    "front": "Pemeriksaan apa yang merekam aktivitas listrik jantung melalui elektroda permukaan?",
+    "back": "EKG merekam aktivitas listrik; ekokardiografi menggunakan ultrasonografi untuk menilai struktur dan fungsi.",
+    "favorite": false
+  },
+  {
+    "id": "c3",
+    "subjectId": "s2",
+    "front": "Pada spirometri, apa yang dimaksud dengan FEV1?",
+    "back": "FEV1 adalah volume udara yang dikeluarkan secara paksa selama detik pertama manuver ekspirasi.",
+    "favorite": false
+  },
+  {
+    "id": "c4",
+    "subjectId": "s2",
+    "front": "Sel alveolar mana yang terutama menghasilkan surfaktan?",
+    "back": "Pneumosit tipe II menghasilkan surfaktan yang menurunkan tegangan permukaan alveolus.",
+    "favorite": false
+  },
+  {
+    "id": "c5",
+    "subjectId": "s3",
+    "front": "Organ apa yang terutama menghasilkan empedu?",
+    "back": "Hati memproduksi empedu; kandung empedu menyimpan dan memekatkannya.",
+    "favorite": false
+  },
+  {
+    "id": "c6",
+    "subjectId": "s3",
+    "front": "Bagian saluran cerna mana yang terutama menyerap vitamin B12 terikat faktor intrinsik?",
+    "back": "Kompleks vitamin B12 dan faktor intrinsik diserap di ileum terminal.",
+    "favorite": false
+  },
+  {
+    "id": "c7",
+    "subjectId": "s4",
+    "front": "Unit fungsional dasar ginjal disebut apa?",
+    "back": "Nefron mencakup korpuskulus renal dan sistem tubulus untuk filtrasi serta pengolahan filtrat.",
+    "favorite": false
+  },
+  {
+    "id": "c8",
+    "subjectId": "s4",
+    "front": "Hormon apa yang meningkatkan reabsorpsi air melalui aquaporin di duktus kolektivus?",
+    "back": "ADH meningkatkan permeabilitas air duktus kolektivus melalui aquaporin.",
+    "favorite": false
+  },
+  {
+    "id": "c9",
+    "subjectId": "s5",
+    "front": "Apa fungsi utama plasenta dalam pertukaran maternal-fetal?",
+    "back": "Plasenta memfasilitasi pertukaran gas, nutrien, dan produk metabolik antara sirkulasi ibu dan janin.",
+    "favorite": false
+  },
+  {
+    "id": "c10",
+    "subjectId": "s5",
+    "front": "Hormon apa yang terutama dideteksi oleh tes kehamilan urin?",
+    "back": "Tes kehamilan mendeteksi human chorionic gonadotropin; interpretasinya mempertimbangkan waktu pemeriksaan.",
+    "favorite": false
+  },
+  {
+    "id": "c11",
+    "subjectId": "s6",
+    "front": "Sel pankreas manakah yang memproduksi insulin?",
+    "back": "Sel beta pulau Langerhans memproduksi insulin; sel alfa menghasilkan glukagon.",
+    "favorite": false
+  },
+  {
+    "id": "c12",
+    "subjectId": "s6",
+    "front": "Pemeriksaan HbA1c menggambarkan apa?",
+    "back": "HbA1c mencerminkan glikasi hemoglobin selama umur eritrosit, dan dapat dipengaruhi gangguan eritrosit.",
+    "favorite": false
+  },
+  {
+    "id": "c13",
+    "subjectId": "s7",
+    "front": "Komponen darah apa yang terutama berperan dalam hemostasis primer?",
+    "back": "Trombosit beradhesi dan beragregasi membentuk sumbat awal; faktor koagulasi memperkuatnya dengan fibrin.",
+    "favorite": false
+  },
+  {
+    "id": "c14",
+    "subjectId": "s7",
+    "front": "Sel darah mana yang terutama mengangkut oksigen menggunakan hemoglobin?",
+    "back": "Eritrosit mengandung hemoglobin untuk pengangkutan oksigen.",
+    "favorite": false
+  },
+  {
+    "id": "c15",
+    "subjectId": "s8",
+    "front": "Saraf kranialis mana yang membawa informasi visual dari retina?",
+    "back": "Nervus optikus membawa impuls visual; gerak bola mata melibatkan saraf lain.",
+    "favorite": false
+  },
+  {
+    "id": "c16",
+    "subjectId": "s8",
+    "front": "Apa tiga komponen Glasgow Coma Scale?",
+    "back": "GCS menilai respons membuka mata, respons verbal, serta respons motorik; faktor pengganggu harus dicatat.",
+    "favorite": false
+  },
+  {
+    "id": "c17",
+    "subjectId": "s9",
+    "front": "Dalam wawancara klinis, apa yang dimaksud dengan afek?",
+    "back": "Afek merupakan ekspresi emosi teramati, sedangkan mood merujuk pengalaman emosi subjektif yang lebih menetap.",
+    "favorite": false
+  },
+  {
+    "id": "c18",
+    "subjectId": "s9",
+    "front": "Pasien mengungkapkan keinginan menyakiti diri. Langkah komunikasi awal mana yang paling tepat?",
+    "back": "Penilaian risiko langsung dan empatik membantu menentukan keselamatan serta kebutuhan dukungan segera.",
+    "favorite": false
+  },
+  {
+    "id": "c19",
+    "subjectId": "s10",
+    "front": "Sel apa yang terutama berperan dalam resorpsi tulang?",
+    "back": "Osteoklas meresorpsi tulang; osteoblas berperan dalam pembentukan matriks tulang.",
+    "favorite": false
+  },
+  {
+    "id": "c20",
+    "subjectId": "s10",
+    "front": "Struktur apa yang menghubungkan otot dengan tulang?",
+    "back": "Tendon menghubungkan otot dan tulang; ligamen umumnya menghubungkan tulang dengan tulang.",
+    "favorite": false
+  },
+  {
+    "id": "c21",
+    "subjectId": "s11",
+    "front": "Lapisan kulit manakah yang paling superfisial?",
+    "back": "Epidermis merupakan lapisan terluar kulit, di atas dermis.",
+    "favorite": false
+  },
+  {
+    "id": "c22",
+    "subjectId": "s11",
+    "front": "Lesi kulit berisi cairan jernih berdiameter kecil disebut apa?",
+    "back": "Vesikel adalah lesi kecil berisi cairan; makula berupa perubahan warna tanpa elevasi.",
+    "favorite": false
+  },
+  {
+    "id": "c23",
+    "subjectId": "s12",
+    "front": "Struktur mata mana yang mengatur banyaknya cahaya melalui perubahan ukuran pupil?",
+    "back": "Otot iris mengatur diameter pupil dan jumlah cahaya yang masuk.",
+    "favorite": false
+  },
+  {
+    "id": "c24",
+    "subjectId": "s12",
+    "front": "Pemeriksaan menggunakan kartu Snellen terutama menilai apa?",
+    "back": "Kartu Snellen digunakan untuk menilai ketajaman penglihatan jauh pada jarak standar.",
+    "favorite": false
+  },
+  {
+    "id": "c25",
+    "subjectId": "s13",
+    "front": "Bagian telinga mana yang mengandung koklea?",
+    "back": "Koklea di telinga dalam mengubah getaran menjadi sinyal saraf pendengaran.",
+    "favorite": false
+  },
+  {
+    "id": "c26",
+    "subjectId": "s13",
+    "front": "Otoskopi terutama digunakan untuk melihat struktur apa?",
+    "back": "Otoskop membantu menilai liang telinga serta membran timpani, bukan struktur telinga dalam secara langsung.",
+    "favorite": false
+  },
+  {
+    "id": "c27",
+    "subjectId": "s14",
+    "front": "Apa tujuan utama kebersihan tangan dalam pelayanan kesehatan?",
+    "back": "Kebersihan tangan mengurangi perpindahan mikroorganisme dan tetap perlu disertai tindakan pencegahan lain sesuai konteks.",
+    "favorite": false
+  },
+  {
+    "id": "c28",
+    "subjectId": "s14",
+    "front": "Antibiotik antibakteri ditujukan terutama terhadap agen apa?",
+    "back": "Antibakteri menargetkan struktur atau proses bakteri; pemilihan memerlukan indikasi yang sesuai.",
+    "favorite": false
+  },
+  {
+    "id": "c29",
+    "subjectId": "s15",
+    "front": "Apa tujuan utama pemantauan kurva pertumbuhan anak secara serial?",
+    "back": "Pengukuran serial memungkinkan penilaian tren pertumbuhan dalam konteks klinis.",
+    "favorite": false
+  },
+  {
+    "id": "c30",
+    "subjectId": "s15",
+    "front": "Larutan rehidrasi oral terutama membantu melalui mekanisme apa?",
+    "back": "Kotranspor natrium-glukosa membantu penyerapan air dan elektrolit.",
+    "favorite": false
+  },
+  {
+    "id": "c31",
+    "subjectId": "s16",
+    "front": "Mengapa identitas pasien dan lokasi tindakan diverifikasi sebelum operasi?",
+    "back": "Verifikasi identitas, prosedur, dan lokasi merupakan bagian pencegahan kesalahan tindakan.",
+    "favorite": false
+  },
+  {
+    "id": "c32",
+    "subjectId": "s16",
+    "front": "Apa arti teknik aseptik?",
+    "back": "Teknik aseptik mengurangi kontaminasi area dan alat selama tindakan.",
+    "favorite": false
+  },
+  {
+    "id": "c33",
+    "subjectId": "s17",
+    "front": "Sensitivitas suatu tes diagnostik adalah proporsi apa?",
+    "back": "Sensitivitas dihitung sebagai true positive dibagi true positive ditambah false negative.",
+    "favorite": false
+  },
+  {
+    "id": "c34",
+    "subjectId": "s17",
+    "front": "Desain studi apa yang mengikuti kelompok terpapar dan tidak terpapar untuk mengamati luaran?",
+    "back": "Studi kohort mengamati kejadian luaran pada kelompok berdasarkan paparan.",
+    "favorite": false
+  },
+  {
+    "id": "c35",
+    "subjectId": "s18",
+    "front": "Apa komponen penting persetujuan tindakan yang bermakna?",
+    "back": "Persetujuan memerlukan informasi yang dipahami, kapasitas pengambilan keputusan, serta kebebasan memilih.",
+    "favorite": false
+  },
+  {
+    "id": "c36",
+    "subjectId": "s18",
+    "front": "Prinsip kerahasiaan mengharuskan tenaga kesehatan melakukan apa?",
+    "back": "Informasi kesehatan harus dilindungi; pengungkapan memerlukan dasar etis dan hukum yang sesuai.",
+    "favorite": false
+  },
+  {
+    "id": "c37",
+    "subjectId": "s1",
+    "front": "Apa fungsi katup jantung?",
+    "back": "Membantu aliran darah satu arah dengan mencegah aliran balik.",
+    "favorite": false
+  },
+  {
+    "id": "c38",
+    "subjectId": "s2",
+    "front": "Apa fungsi diafragma saat inspirasi?",
+    "back": "Kontraksi menurunkan diafragma dan meningkatkan volume rongga toraks.",
+    "favorite": false
+  },
+  {
+    "id": "c39",
+    "subjectId": "s3",
+    "front": "Apa peran pankreas eksokrin?",
+    "back": "Menghasilkan enzim pencernaan dan bikarbonat ke saluran cerna.",
+    "favorite": false
+  },
+  {
+    "id": "c40",
+    "subjectId": "s4",
+    "front": "Apa peran eritropoietin?",
+    "back": "Merangsang produksi eritrosit; terutama diproduksi ginjal.",
+    "favorite": false
+  },
+  {
+    "id": "c41",
+    "subjectId": "s5",
+    "front": "Apa arti gravida?",
+    "back": "Jumlah kehamilan, termasuk kehamilan saat ini, tanpa bergantung pada luaran.",
+    "favorite": false
+  },
+  {
+    "id": "c42",
+    "subjectId": "s6",
+    "front": "Apa fungsi glukagon?",
+    "back": "Meningkatkan ketersediaan glukosa, antara lain melalui produksi glukosa hati.",
+    "favorite": false
+  },
+  {
+    "id": "c43",
+    "subjectId": "s7",
+    "front": "Apa fungsi neutrofil?",
+    "back": "Berperan dalam respons imun bawaan, termasuk fagositosis mikroorganisme.",
+    "favorite": false
+  },
+  {
+    "id": "c44",
+    "subjectId": "s8",
+    "front": "Apa fungsi serebelum?",
+    "back": "Membantu koordinasi gerak, keseimbangan, dan pembelajaran motorik.",
+    "favorite": false
+  },
+  {
+    "id": "c45",
+    "subjectId": "s9",
+    "front": "Apa yang dimaksud anhedonia?",
+    "back": "Berkurangnya minat atau kesenangan pada aktivitas yang biasanya menyenangkan.",
+    "favorite": false
+  },
+  {
+    "id": "c46",
+    "subjectId": "s10",
+    "front": "Apa fungsi kartilago artikular?",
+    "back": "Mengurangi gesekan dan mendistribusikan beban pada permukaan sendi.",
+    "favorite": false
+  },
+  {
+    "id": "c47",
+    "subjectId": "s11",
+    "front": "Apa itu pruritus?",
+    "back": "Sensasi gatal yang menimbulkan keinginan menggaruk.",
+    "favorite": false
+  },
+  {
+    "id": "c48",
+    "subjectId": "s12",
+    "front": "Apa fungsi retina?",
+    "back": "Menerima cahaya dan memulai transduksi menjadi sinyal saraf visual.",
+    "favorite": false
+  },
+  {
+    "id": "c49",
+    "subjectId": "s13",
+    "front": "Apa fungsi tuba Eustachius?",
+    "back": "Membantu menyamakan tekanan telinga tengah dengan nasofaring.",
+    "favorite": false
+  },
+  {
+    "id": "c50",
+    "subjectId": "s14",
+    "front": "Apa bedanya kolonisasi dan infeksi?",
+    "back": "Kolonisasi adalah keberadaan mikroorganisme tanpa penyakit; infeksi melibatkan interaksi yang dapat menimbulkan kerusakan atau gejala.",
+    "favorite": false
+  },
+  {
+    "id": "c51",
+    "subjectId": "s15",
+    "front": "Mengapa dosis obat anak memerlukan perhatian khusus?",
+    "back": "Dosis sering terkait berat badan serta maturasi organ; perlu verifikasi obat dan konteks klinis.",
+    "favorite": false
+  },
+  {
+    "id": "c52",
+    "subjectId": "s16",
+    "front": "Apa tujuan dokumentasi operasi?",
+    "back": "Mencatat indikasi, temuan, prosedur, dan rencana perawatan untuk kesinambungan pelayanan.",
+    "favorite": false
+  },
+  {
+    "id": "c53",
+    "subjectId": "s17",
+    "front": "Apa itu spesifisitas?",
+    "back": "Proporsi hasil negatif di antara individu yang benar-benar tidak sakit.",
+    "favorite": false
+  },
+  {
+    "id": "c54",
+    "subjectId": "s18",
+    "front": "Apa arti prinsip beneficence?",
+    "back": "Mengupayakan manfaat bagi pasien dengan mempertimbangkan konteks serta preferensinya.",
+    "favorite": false
+  },
+  {
+    "id": "c55",
+    "subjectId": "s1",
+    "front": "Apa arti perfusi?",
+    "back": "Aliran darah melalui jaringan untuk menyediakan oksigen dan nutrien.",
+    "favorite": false
+  },
+  {
+    "id": "c56",
+    "subjectId": "s2",
+    "front": "Apa beda ventilasi dan oksigenasi?",
+    "back": "Ventilasi berkaitan perpindahan udara dan eliminasi karbon dioksida; oksigenasi berkaitan masuknya oksigen ke darah.",
+    "favorite": false
+  },
+  {
+    "id": "c57",
+    "subjectId": "s3",
+    "front": "Apa fungsi vili usus?",
+    "back": "Memperluas permukaan untuk penyerapan nutrien.",
+    "favorite": false
+  },
+  {
+    "id": "c58",
+    "subjectId": "s4",
+    "front": "Apa arti diuresis?",
+    "back": "Produksi atau pengeluaran urin dalam suatu periode.",
+    "favorite": false
+  },
+  {
+    "id": "c59",
+    "subjectId": "s17",
+    "front": "Apa itu prevalensi?",
+    "back": "Proporsi populasi yang memiliki kondisi pada titik atau periode waktu tertentu.",
+    "favorite": false
+  },
+  {
+    "id": "c60",
+    "subjectId": "s18",
+    "front": "Apa arti otonomi pasien?",
+    "back": "Menghormati hak pasien yang memiliki kapasitas untuk mengambil keputusan setelah memperoleh informasi memadai.",
+    "favorite": false
+  }
+]
