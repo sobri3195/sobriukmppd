@@ -1,78 +1,27 @@
 import { useState } from "react";
 import {
   ResponsiveContainer,
-  AreaChart,
-  Area,
   XAxis,
   YAxis,
   Tooltip,
-  CartesianGrid,
   BarChart,
   Bar,
   LineChart,
   Line,
 } from "recharts";
-import { format, parseISO, subDays } from "date-fns";
+import { startOfDay, subDays } from "date-fns";
 import { useStore } from "../lib/store";
 import { localDate, statistics, subjectStats, score } from "../lib/learning";
-import type { State } from "../lib/model";
+import { ActivityChart } from "../components/charts/ActivityChart";
+import { isFinalized } from "../lib/quiz";
 import { Empty, PageTitle, Progress } from "../components/shared";
-export function ActivityChart({ data, days }: { data: State; days: number }) {
-  const rows = Array.from({ length: days }, (_, i) => {
-    const date = subDays(new Date(), days - 1 - i);
-    return {
-      day: format(date, "dd MMM"),
-      menit: data.sessions
-        .filter((s) => localDate(parseISO(s.at)) === localDate(date))
-        .reduce((a, x) => a + x.minutes, 0),
-    };
-  });
-  return (
-    <div className="chart">
-      <ResponsiveContainer width="100%" height="100%">
-        <AreaChart data={rows}>
-          <defs>
-            <linearGradient id="activity-fill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#0d9488" stopOpacity={0.22} />
-              <stop offset="100%" stopColor="#0d9488" stopOpacity={0} />
-            </linearGradient>
-          </defs>
-          <CartesianGrid
-            vertical={false}
-            stroke="var(--border)"
-            strokeDasharray="3 5"
-          />
-          <XAxis
-            dataKey="day"
-            tickLine={false}
-            axisLine={false}
-            fontSize={11}
-            minTickGap={20}
-          />
-          <YAxis
-            tickLine={false}
-            axisLine={false}
-            fontSize={11}
-            width={30}
-            allowDecimals={false}
-          />
-          <Tooltip />
-          <Area
-            type="monotone"
-            dataKey="menit"
-            stroke="#0d9488"
-            strokeWidth={2.5}
-            fill="url(#activity-fill)"
-          />
-        </AreaChart>
-      </ResponsiveContainer>
-    </div>
-  );
-}
 export default function Statistics() {
   const all = useStore((s) => s.data);
   const [days, setDays] = useState(30);
-  const cutoff = days ? subDays(new Date(), days).toISOString() : "";
+  const cutoff = days
+    ? startOfDay(subDays(new Date(), days - 1)).toISOString()
+    : "";
+  const firstDay = days ? localDate(subDays(new Date(), days - 1)) : "";
   const data = {
     ...all,
     sessions: all.sessions.filter((x) => x.at >= cutoff),
@@ -80,12 +29,12 @@ export default function Statistics() {
       (x) => (x.submittedAt ?? x.startedAt) >= cutoff,
     ),
     reviews: all.reviews.filter((x) => x.at >= cutoff),
-    tasks: all.tasks.filter((x) => x.date >= cutoff.slice(0, 10)),
+    tasks: all.tasks.filter((x) => x.date >= firstDay && x.date <= localDate()),
   };
   const s = statistics(data);
   const subjects = subjectStats(data);
   const results = data.quizzes
-    .filter((q) => q.submittedAt)
+    .filter(isFinalized)
     .map((q, i) => ({ name: `#${i + 1}`, skor: score(q).percent }));
   return (
     <>

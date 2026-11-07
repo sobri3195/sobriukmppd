@@ -1,7 +1,34 @@
-import { questions, stations } from "../data";
+import { z } from "zod";
+import { questions, stations, subjects } from "../data";
 import { stateSchema, emptyState, type State } from "./model";
 export const KEY = "medtrack:v1:state";
+const backupSchema = z.object({
+  format: z.literal("medtrack-backup"),
+  schemaVersion: z.literal(1),
+  exportedAt: z.iso.datetime(),
+  appVersion: z.string(),
+  data: stateSchema,
+});
+export function exportBackup(data: State, at = new Date()) {
+  return JSON.stringify(
+    {
+      format: "medtrack-backup",
+      schemaVersion: 1,
+      exportedAt: at.toISOString(),
+      appVersion: "0.2.0",
+      data: validateState(stateSchema.parse(data)),
+    },
+    null,
+    2,
+  );
+}
 export function parseBackup(raw: string): State {
+  return parseBackupDocument(raw).data;
+}
+export function parseBackupDocument(raw: string): {
+  data: State;
+  exportedAt: string | null;
+} {
   if (raw.length > 15_000_000)
     throw new Error("Backup terlalu besar (maksimal 15 MB).");
   const parsed: unknown = JSON.parse(raw, (key, value) => {
@@ -9,7 +36,13 @@ export function parseBackup(raw: string): State {
       throw new Error("Kunci data tidak aman.");
     return value;
   });
-  return validateState(stateSchema.parse(parsed));
+  const envelope = backupSchema.safeParse(parsed);
+  if (envelope.success)
+    return {
+      data: validateState(envelope.data.data),
+      exportedAt: envelope.data.exportedAt,
+    };
+  return { data: validateState(stateSchema.parse(parsed)), exportedAt: null };
 }
 function validateState(state: State): State {
   for (const field of [
@@ -24,6 +57,20 @@ function validateState(state: State): State {
   ] as const) {
     if (new Set(state[field].map((x) => x.id)).size !== state[field].length)
       throw new Error("ID duplikat pada backup.");
+  }
+  const knownSubjects = new Set(subjects.map((s) => s.id));
+  if (state.profile?.priorities.some((id) => !knownSubjects.has(id)))
+    throw new Error("Bidang prioritas tidak dikenal.");
+  for (const item of [
+    ...state.tasks,
+    ...state.sessions,
+    ...state.cards,
+    ...state.notes,
+    ...state.topics,
+    ...(state.timer ? [state.timer] : []),
+  ]) {
+    if (!knownSubjects.has(item.subjectId))
+      throw new Error("Bidang tidak dikenal.");
   }
   for (const quiz of state.quizzes) {
     if (new Set(quiz.questionIds).size !== quiz.questionIds.length)

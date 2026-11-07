@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { notifySaved } from "../lib/feedback";
+import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { toast } from "sonner";
 import { useStore } from "../lib/store";
 import { uid, now, type State } from "../lib/model";
 import { download } from "../lib/storage";
@@ -14,7 +14,7 @@ import {
 } from "../components/shared";
 type Note = State["notes"][number];
 export default function Notes() {
-  const { data, update } = useStore();
+  const { data, update, updateDebounced, dirty, error } = useStore();
   const [params] = useSearchParams();
   const blank = (): Note => ({
     id: uid(),
@@ -25,28 +25,29 @@ export default function Notes() {
     pinned: false,
     updatedAt: now(),
   });
-  const [edit, setEdit] = useState<Note | null>(() =>
+  const [selected, setSelected] = useState<string | null>(null);
+  const [newDraft] = useState<Note | null>(() =>
     params.has("new") ? blank() : null,
   );
+  const edit =
+    data.notes.find((n) => n.id === selected) ??
+    (selected === null ? newDraft : null);
+  function setEdit(note: Note | null) {
+    if (!note) {
+      setSelected("");
+      return;
+    }
+    setSelected(note.id);
+    updateDebounced((s) => ({
+      ...s,
+      notes: [
+        ...s.notes.filter((n) => n.id !== note.id),
+        { ...note, updatedAt: now() },
+      ],
+    }));
+  }
   const [query, setQuery] = useState("");
   const [subject, setSubject] = useState("");
-  const [saved, setSaved] = useState(false);
-  useEffect(() => {
-    if (!edit) return;
-    setSaved(false);
-    const t = setTimeout(() => {
-      if (!edit.title.trim()) return;
-      update((s) => ({
-        ...s,
-        notes: [
-          ...s.notes.filter((x) => x.id !== edit.id),
-          { ...edit, updatedAt: now() },
-        ],
-      }));
-      setSaved(true);
-    }, 600);
-    return () => clearTimeout(t);
-  }, [edit, update]);
   return (
     <>
       <PageTitle eyebrow="TULIS, HUBUNGKAN, PAHAMI" title="Catatan belajar">
@@ -99,7 +100,7 @@ export default function Notes() {
               <button
                 className="note-list-item"
                 key={n.id}
-                onClick={() => setEdit(n)}
+                onClick={() => setSelected(n.id)}
               >
                 <strong>
                   {n.pinned ? "★ " : ""}
@@ -117,6 +118,7 @@ export default function Notes() {
           <section className="card stack">
             <Field label="Judul catatan">
               <input
+                required
                 maxLength={200}
                 value={edit.title}
                 onChange={(e) => setEdit({ ...edit, title: e.target.value })}
@@ -130,6 +132,7 @@ export default function Notes() {
             </Field>
             <Field label="Tag">
               <input
+                maxLength={2000}
                 value={edit.tags}
                 onChange={(e) => setEdit({ ...edit, tags: e.target.value })}
               />
@@ -151,8 +154,12 @@ export default function Notes() {
               Pin catatan
             </label>
             <p className="small muted" role="status">
-              {saved ? "Tersimpan otomatis" : "Menyimpan…"} · Teks polos, HTML
-              tidak dijalankan.
+              {error
+                ? "Belum tersimpan — lihat peringatan penyimpanan"
+                : dirty
+                  ? "Menyimpan…"
+                  : "Tersimpan otomatis"}{" "}
+              · Teks polos, HTML tidak dijalankan.
             </p>
             <Button
               variant="destructive"
@@ -163,7 +170,7 @@ export default function Notes() {
                     notes: s.notes.filter((n) => n.id !== edit.id),
                   }));
                   setEdit(null);
-                  toast.success("Catatan dihapus");
+                  notifySaved("Catatan dihapus");
                 }
               }}
             >

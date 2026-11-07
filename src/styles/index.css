@@ -1776,3 +1776,213 @@ details p {
     scroll-behavior: auto !important;
   }
 }
+/* Stage two: stable layouts and accessible touch targets. */
+.main-content {
+  max-width: 1440px;
+}
+.recent-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border-bottom: 1px solid var(--border);
+  padding: 14px 0;
+  font-size: 12px;
+}
+.recent-row small {
+  color: var(--muted);
+  font-size: 10px;
+}
+.practice-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+.practice-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 12px;
+  background: var(--card);
+}
+.practice-links a:hover {
+  background: var(--soft);
+}
+.drawer-close {
+  align-self: flex-end;
+  min-width: 44px;
+  min-height: 44px;
+}
+.sidebar-collapsed .sidebar {
+  width: 78px;
+  padding: 25px 12px;
+}
+.sidebar-collapsed .brand > span:last-child,
+.sidebar-collapsed .nav-caption,
+.sidebar-collapsed .sidebar-note,
+.sidebar-collapsed .sidebar-user > div,
+.sidebar-collapsed .sidebar-user > svg,
+.sidebar-collapsed .sidebar nav a span,
+.sidebar-collapsed .sidebar nav small {
+  display: none;
+}
+.sidebar-collapsed .sidebar nav a {
+  justify-content: center;
+  padding: 12px;
+  min-height: 44px;
+}
+.sidebar-collapsed .topbar,
+.sidebar-collapsed .main-content {
+  margin-left: 78px;
+}
+.sidebar-collapsed .sidebar nav {
+  margin-top: 28px;
+}
+.sidebar-collapsed .sidebar-user {
+  justify-content: center;
+  margin-top: auto;
+}
+.main-content > section,
+.main-content > .two-col {
+  animation: page-arrive 0.18s ease-out;
+}
+@keyframes page-arrive {
+  from {
+    opacity: 0.65;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.button,
+.icon-button {
+  min-height: 40px;
+}
+.error-banner a {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.chart {
+  overflow: hidden;
+}
+.card,
+.modal {
+  overflow-wrap: anywhere;
+}
+.modal {
+  scroll-padding-bottom: 35px;
+}
+input,
+select,
+textarea {
+  scroll-margin: 120px;
+}
+@media (max-width: 850px) {
+  .collapse-toggle {
+    display: none;
+  }
+  .sidebar-collapsed .topbar,
+  .sidebar-collapsed .main-content {
+    margin-left: 0;
+  }
+  .sidebar-collapsed .sidebar {
+    width: 250px;
+    padding: 25px 20px;
+  }
+  .sidebar-collapsed .brand > span:last-child,
+  .sidebar-collapsed .sidebar-user > div {
+    display: block;
+  }
+  .sidebar-collapsed .sidebar nav a span,
+  .sidebar-collapsed .sidebar nav small {
+    display: inline;
+  }
+  .sidebar-collapsed .sidebar nav a {
+    justify-content: flex-start;
+  }
+  .sidebar-collapsed .sidebar-user {
+    justify-content: flex-start;
+  }
+  .sidebar-collapsed .sidebar nav {
+    margin-top: 0;
+  }
+  .sidebar-collapsed .nav-caption {
+    display: block;
+  }
+  .button,
+  .icon-button,
+  .sidebar nav a,
+  .bottom-nav a {
+    min-height: 44px;
+  }
+  .icon-button {
+    min-width: 44px;
+  }
+  .modal input,
+  .modal select,
+  .modal textarea {
+    font-size: 16px;
+  }
+  .sidebar-user {
+    min-height: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .question-grid {
+    grid-template-columns: repeat(5, minmax(44px, 1fr));
+  }
+  .question-grid button {
+    min-height: 44px;
+    font-size: 12px;
+  }
+  .toolbar select,
+  .toolbar input {
+    min-height: 44px;
+  }
+  .recent-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .practice-links a {
+    flex: 1;
+    justify-content: center;
+  }
+  .modal {
+    max-height: calc(100dvh - 24px);
+  }
+  .rating-row .button {
+    min-height: 44px;
+  }
+  .checklist-item {
+    min-height: 44px;
+  }
+  .bottom-nav {
+    padding-top: 6px;
+  }
+  .bottom-nav a {
+    min-width: 44px;
+  }
+  .brand {
+    font-size: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .main-content > section,
+  .main-content > .two-col {
+    animation: none;
+  }
+}
+@media (max-width: 850px) {
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea,
+  .check,
+  .chips label {
+    min-height: 44px;
+  }
+}

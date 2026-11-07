@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 import { useStore } from "../lib/store";
-import { uid, now } from "../lib/model";
+import { uid } from "../lib/model";
 import { getTopics } from "../data";
 import { Button, Field, SubjectSelect, PageTitle } from "../components/shared";
-export const elapsed = (
-  timer: { elapsedMs: number; startedAt: number; running: boolean },
-  at = Date.now(),
-) => timer.elapsedMs + (timer.running ? Math.max(0, at - timer.startedAt) : 0);
+import { elapsed, completeTimer, toggleTimer } from "../lib/timer";
 export default function Timer() {
   const { data, update } = useStore();
   const [tick, setTick] = useState(Date.now());
@@ -36,25 +33,11 @@ export default function Timer() {
       elapsed(timer),
       timer.mode === "stopwatch" ? 86_400_000 : timer.targetSeconds * 1000,
     );
-    update((s) =>
-      s.timer?.id !== timer.id
-        ? s
-        : {
-            ...s,
-            timer: null,
-            sessions: [
-              ...s.sessions,
-              {
-                id: timer.id,
-                subjectId: timer.subjectId,
-                topicId: timer.topicId,
-                minutes: actual / 60000,
-                at: now(),
-              },
-            ],
-          },
-    );
-    toast.success(`Sesi tersimpan · ${(actual / 60000).toFixed(1)} menit`);
+    const saved = update((s) => completeTimer(s, timer.id));
+    if (saved)
+      toast.success(`Sesi tersimpan · ${(actual / 60000).toFixed(1)} menit`);
+    else
+      toast.error("Sesi ada di memori. Ekspor backup atau coba simpan ulang.");
     if (timer.mode === "pomodoro") setRestEnd(Date.now() + rest * 60000);
   }
   useEffect(() => {
@@ -196,17 +179,7 @@ export default function Timer() {
               variant="outline"
               onClick={() =>
                 update((s) =>
-                  !s.timer
-                    ? s
-                    : {
-                        ...s,
-                        timer: {
-                          ...s.timer,
-                          elapsedMs: elapsed(s.timer),
-                          startedAt: Date.now(),
-                          running: !s.timer.running,
-                        },
-                      },
+                  !s.timer ? s : { ...s, timer: toggleTimer(s.timer) },
                 )
               }
             >

@@ -4,6 +4,8 @@ import {
   Suspense,
   useEffect,
   useState,
+  useRef,
+  useCallback,
   type ReactNode,
 } from "react";
 import {
@@ -41,7 +43,11 @@ import {
 } from "lucide-react";
 import { Toaster } from "sonner";
 import { useRegisterSW } from "virtual:pwa-register/react";
+import { useShallow } from "zustand/react/shallow";
 import { useStore } from "../lib/store";
+import { getCards } from "../data";
+import { useFocusTrap } from "../hooks/useFocusTrap";
+import { usePwaStatus } from "../hooks/usePwaStatus";
 import { score } from "../lib/learning";
 import { Button, Empty, Modal } from "../components/shared";
 const Dashboard = lazy(() => import("../features/Dashboard"));
@@ -138,11 +144,50 @@ function StudyHub() {
   );
 }
 function Shell() {
-  const { data, update, error } = useStore();
+  const { profile, cards, deletedCards, update, error, dirty, flush } =
+    useStore(
+      useShallow((s) => ({
+        profile: s.data.profile,
+        cards: s.data.cards,
+        deletedCards: s.data.deletedCards,
+        update: s.update,
+        error: s.error,
+        dirty: s.dirty,
+        flush: s.flush,
+      })),
+    );
+  const data = { profile, cards, deletedCards };
+  const { online, canInstall, installApp } = usePwaStatus();
   const location = useLocation();
   const navigate = useNavigate();
   const [menu, setMenu] = useState(false);
   const [quick, setQuick] = useState(false);
+  const [collapsed, setCollapsed] = useState(() => {
+    try {
+      return localStorage.getItem("medtrack:sidebar-collapsed") === "true";
+    } catch {
+      return false;
+    }
+  });
+  const sidebarRef = useRef<HTMLElement>(null);
+  const closeMenu = useCallback(() => setMenu(false), []);
+  useFocusTrap(sidebarRef, menu, closeMenu);
+  useEffect(() => {
+    document.documentElement.classList.toggle("sidebar-collapsed", collapsed);
+    try {
+      localStorage.setItem("medtrack:sidebar-collapsed", String(collapsed));
+    } catch {
+      /* Only a layout preference. */
+    }
+    return () => document.documentElement.classList.remove("sidebar-collapsed");
+  }, [collapsed]);
+  useEffect(() => {
+    const resize = () => {
+      if (window.matchMedia("(min-width:851px)").matches) setMenu(false);
+    };
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+  }, []);
   const [search, setSearch] = useState("");
   const {
     needRefresh: [needRefresh],
@@ -161,7 +206,7 @@ function Shell() {
     setQuick(false);
   }, [location.pathname]);
   useEffect(() => {
-    if (location.pathname !== "/onboarding")
+    if (location.pathname !== "/onboarding" && location.pathname !== "/")
       try {
         sessionStorage.setItem("medtrack:last-route", location.pathname);
       } catch {
@@ -189,7 +234,22 @@ function Shell() {
       </a>
       {data.profile && (
         <>
-          <aside className={`sidebar ${menu ? "open" : ""}`}>
+          <aside
+            ref={sidebarRef}
+            role={menu ? "dialog" : undefined}
+            aria-modal={menu ? true : undefined}
+            aria-label={menu ? "Menu utama" : undefined}
+            className={`sidebar ${menu ? "open" : ""}`}
+          >
+            {menu && (
+              <button
+                className="icon-button drawer-close"
+                aria-label="Tutup menu"
+                onClick={closeMenu}
+              >
+                ×
+              </button>
+            )}
             <Link to="/dashboard" className="brand">
               <span className="brand-mark">
                 <Activity size={25} />
@@ -203,10 +263,17 @@ function Shell() {
               {nav.map((x, i) => (
                 <div key={x.to}>
                   {[1, 6, 8, 10].includes(i) && <div className="nav-divider" />}
-                  <NavLink end={x.to === "/latihan"} to={x.to}>
+                  <NavLink
+                    end={x.to === "/latihan"}
+                    to={x.to}
+                    aria-label={x.label}
+                    title={x.label}
+                  >
                     <x.icon size={18} />
                     <span>{x.label}</span>
-                    {x.to === "/belajar/flashcards" && <small>60</small>}
+                    {x.to === "/belajar/flashcards" && (
+                      <small>{getCards(data).length}</small>
+                    )}
                   </NavLink>
                 </div>
               ))}
@@ -242,6 +309,14 @@ function Shell() {
                 onClick={() => setMenu(!menu)}
               >
                 <Menu size={21} />
+              </button>
+              <button
+                className="icon-button collapse-toggle"
+                aria-label={collapsed ? "Perluas sidebar" : "Ciutkan sidebar"}
+                aria-expanded={!collapsed}
+                onClick={() => setCollapsed(!collapsed)}
+              >
+                <Menu size={20} />
               </button>
               <span className="muted">Workspace</span>
               <ChevronRight size={14} />
@@ -306,10 +381,35 @@ function Shell() {
         {needRefresh && (
           <div className="notice">
             Versi baru tersedia. Simpan aktivitas sebelum memperbarui.{" "}
-            <Button size="sm" onClick={() => updateServiceWorker(true)}>
+            <Button
+              size="sm"
+              onClick={() => {
+                if (flush()) updateServiceWorker(true);
+                else
+                  alert(
+                    "Progres belum tersimpan. Ekspor backup sebelum memperbarui aplikasi.",
+                  );
+              }}
+            >
               Perbarui aplikasi
             </Button>
           </div>
+        )}
+        {!online && (
+          <div className="notice" role="status">
+            Kamu sedang offline. Fitur lokal tetap tersedia untuk aset yang
+            telah tersimpan.
+          </div>
+        )}
+        {canInstall && (
+          <Button variant="outline" onClick={installApp}>
+            Instal MEDTRACK
+          </Button>
+        )}
+        {dirty && !error && (
+          <p className="small muted" role="status">
+            Menyimpan progres…
+          </p>
         )}
         <Suspense
           fallback={
@@ -318,7 +418,7 @@ function Shell() {
             </div>
           }
         >
-          <Routes>
+          <Routes key={location.pathname + location.search}>
             <Route path="/" element={<Restore />} />
             <Route path="/onboarding" element={<Profile onboarding />} />
             <Route path="/dashboard" element={<Dashboard />} />
@@ -369,7 +469,7 @@ function Shell() {
           </button>
           <nav className="bottom-nav" aria-label="Navigasi mobile">
             {mobile.map((x) => (
-              <NavLink key={x.to} to={x.to}>
+              <NavLink key={x.to} to={x.to} end={x.to === "/latihan"}>
                 <x.icon size={21} />
                 <span>{x.label}</span>
               </NavLink>
@@ -385,10 +485,21 @@ function Shell() {
               { to: "/belajar/planner?new=1", text: "Tambah tugas" },
               { to: "/belajar/catatan?new=1", text: "Tambah catatan" },
               { to: "/profil", text: "Tambah target" },
-              { to: "/belajar/flashcards", text: "Tambah flashcard" },
+              { to: "/belajar/flashcards?new=1", text: "Tambah flashcard" },
             ].map((x) => (
               <Button asChild variant="outline" key={x.to}>
-                <Link to={x.to} onClick={() => setQuick(false)}>
+                <Link
+                  to={x.to}
+                  onClick={(e) => {
+                    if (x.to.includes("?new=")) {
+                      e.preventDefault();
+                      navigate(
+                        x.to.replace("new=1", `new=${crypto.randomUUID()}`),
+                      );
+                    }
+                    setQuick(false);
+                  }}
+                >
                   {x.text} →
                 </Link>
               </Button>

@@ -1,8 +1,8 @@
+import { notifySaved } from "../lib/feedback";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { addDays } from "date-fns";
 import { Link, useNavigate } from "react-router-dom";
-import { toast } from "sonner";
 import { profileSchema, type Profile } from "../lib/model";
 import { useStore } from "../lib/store";
 import { localDate, statistics } from "../lib/learning";
@@ -68,7 +68,7 @@ export default function ProfilePage({
         className="card form-grid"
         onSubmit={handleSubmit((profile) => {
           update((s) => ({ ...s, profile }));
-          toast.success("Profil tersimpan");
+          notifySaved("Profil tersimpan");
           navigate("/dashboard");
         })}
       >
