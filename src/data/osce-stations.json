@@ -1,0 +1,518 @@
+[
+  {
+    "id": "o1",
+    "title": "Anamnesis nyeri dada",
+    "specialty": "s1",
+    "scenario": "Pasien fiktif 45 tahun datang dengan nyeri dada baru.",
+    "instructions": "Tanyakan onset, karakter, penjalaran, dan gejala penyerta.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Tanyakan onset, karakter, penjalaran, dan gejala penyerta.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o2",
+    "title": "Keluhan sesak",
+    "specialty": "s2",
+    "scenario": "Pasien fiktif 30 tahun mengeluh sesak saat aktivitas.",
+    "instructions": "Tanyakan onset, pencetus, riwayat respirasi, dan tanda bahaya.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Tanyakan onset, pencetus, riwayat respirasi, dan tanda bahaya.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o3",
+    "title": "Nyeri perut",
+    "specialty": "s3",
+    "scenario": "Pasien fiktif 24 tahun mengeluh nyeri perut.",
+    "instructions": "Gali lokasi, migrasi, pola nyeri, dan keluhan gastrointestinal.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Gali lokasi, migrasi, pola nyeri, dan keluhan gastrointestinal.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o4",
+    "title": "Keluhan berkemih",
+    "specialty": "s4",
+    "scenario": "Pasien fiktif 35 tahun mengeluh nyeri saat berkemih.",
+    "instructions": "Gali pola berkemih, demam, nyeri pinggang, dan riwayat relevan.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Gali pola berkemih, demam, nyeri pinggang, dan riwayat relevan.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o5",
+    "title": "Konseling antenatal",
+    "specialty": "s5",
+    "scenario": "Pasien fiktif hamil datang untuk diskusi pemeriksaan rutin.",
+    "instructions": "Tanyakan usia kehamilan, keluhan, dan riwayat obstetri.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Tanyakan usia kehamilan, keluhan, dan riwayat obstetri.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o6",
+    "title": "Edukasi diabetes",
+    "specialty": "s6",
+    "scenario": "Pasien fiktif ingin memahami pemantauan diabetes.",
+    "instructions": "Jelaskan pemantauan dan peran pola hidup dengan bahasa sederhana.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Jelaskan pemantauan dan peran pola hidup dengan bahasa sederhana.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o7",
+    "title": "Keluhan lelah",
+    "specialty": "s7",
+    "scenario": "Pasien fiktif 28 tahun mengeluh cepat lelah.",
+    "instructions": "Gali durasi, perdarahan, pola makan, dan gejala sistemik.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Gali durasi, perdarahan, pola makan, dan gejala sistemik.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o8",
+    "title": "Sakit kepala",
+    "specialty": "s8",
+    "scenario": "Pasien fiktif 32 tahun mengeluh sakit kepala berulang.",
+    "instructions": "Gali onset, pola, defisit neurologis, serta tanda bahaya.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Gali onset, pola, defisit neurologis, serta tanda bahaya.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o9",
+    "title": "Wawancara suasana perasaan",
+    "specialty": "s9",
+    "scenario": "Pasien fiktif merasa sedih selama beberapa minggu.",
+    "instructions": "Gali gejala, fungsi harian, dukungan, dan keselamatan diri.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Gali gejala, fungsi harian, dukungan, dan keselamatan diri.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o10",
+    "title": "Nyeri lutut",
+    "specialty": "s10",
+    "scenario": "Pasien fiktif mengeluh nyeri lutut setelah aktivitas.",
+    "instructions": "Gali trauma, bengkak, kemampuan menapak, dan keterbatasan fungsi.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Gali trauma, bengkak, kemampuan menapak, dan keterbatasan fungsi.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o11",
+    "title": "Edukasi kebersihan tangan",
+    "specialty": "s14",
+    "scenario": "Pasien fiktif ingin memahami pencegahan penularan infeksi.",
+    "instructions": "Demonstrasikan prinsip kebersihan tangan dan periksa pemahaman.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Demonstrasikan prinsip kebersihan tangan dan periksa pemahaman.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  },
+  {
+    "id": "o12",
+    "title": "Persetujuan tindakan",
+    "specialty": "s18",
+    "scenario": "Pasien fiktif mempertimbangkan tindakan diagnostik elektif.",
+    "instructions": "Jelaskan tujuan, manfaat, risiko, alternatif, dan hak menolak.",
+    "durationMinutes": 8,
+    "checklistItems": [
+      {
+        "id": "intro",
+        "label": "Perkenalan dan verifikasi identitas",
+        "weight": 1
+      },
+      {
+        "id": "consent",
+        "label": "Minta persetujuan dan jaga privasi",
+        "weight": 2
+      },
+      {
+        "id": "specific",
+        "label": "Jelaskan tujuan, manfaat, risiko, alternatif, dan hak menolak.",
+        "weight": 3
+      },
+      {
+        "id": "safety",
+        "label": "Nilai tanda bahaya dan kebutuhan eskalasi sesuai konteks",
+        "weight": 3
+      },
+      {
+        "id": "communication",
+        "label": "Komunikasi empatik dan periksa pemahaman",
+        "weight": 2
+      },
+      {
+        "id": "close",
+        "label": "Ringkas temuan dan sepakati langkah berikutnya",
+        "weight": 1
+      }
+    ],
+    "criticalItems": ["consent", "safety"],
+    "maxScore": 12,
+    "reviewStatus": "Materi latihan — belum divalidasi klinis"
+  }
+]

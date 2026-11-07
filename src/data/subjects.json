@@ -1,0 +1,92 @@
+[
+  {
+    "id": "s1",
+    "name": "Kardiovaskular",
+    "color": "#0d786e"
+  },
+  {
+    "id": "s2",
+    "name": "Respirasi",
+    "color": "#5678b9"
+  },
+  {
+    "id": "s3",
+    "name": "Gastrointestinal",
+    "color": "#a268b0"
+  },
+  {
+    "id": "s4",
+    "name": "Ginjal dan Urologi",
+    "color": "#d38c38"
+  },
+  {
+    "id": "s5",
+    "name": "Obstetri dan Ginekologi",
+    "color": "#0d786e"
+  },
+  {
+    "id": "s6",
+    "name": "Endokrin dan Metabolik",
+    "color": "#5678b9"
+  },
+  {
+    "id": "s7",
+    "name": "Hematologi dan Imunologi",
+    "color": "#a268b0"
+  },
+  {
+    "id": "s8",
+    "name": "Neurologi",
+    "color": "#d38c38"
+  },
+  {
+    "id": "s9",
+    "name": "Psikiatri",
+    "color": "#0d786e"
+  },
+  {
+    "id": "s10",
+    "name": "Muskuloskeletal",
+    "color": "#5678b9"
+  },
+  {
+    "id": "s11",
+    "name": "Dermatologi",
+    "color": "#a268b0"
+  },
+  {
+    "id": "s12",
+    "name": "Oftalmologi",
+    "color": "#d38c38"
+  },
+  {
+    "id": "s13",
+    "name": "THT",
+    "color": "#0d786e"
+  },
+  {
+    "id": "s14",
+    "name": "Penyakit Infeksi",
+    "color": "#5678b9"
+  },
+  {
+    "id": "s15",
+    "name": "Pediatri",
+    "color": "#a268b0"
+  },
+  {
+    "id": "s16",
+    "name": "Bedah",
+    "color": "#d38c38"
+  },
+  {
+    "id": "s17",
+    "name": "Kesehatan Masyarakat",
+    "color": "#0d786e"
+  },
+  {
+    "id": "s18",
+    "name": "Etika dan Medikolegal",
+    "color": "#5678b9"
+  }
+]
